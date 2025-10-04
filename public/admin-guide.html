@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin & Moderation Guide</title>
+    <meta
+      name="description"
+      content="Admin & Moderation Guide for New Life Church"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        max-width: 58rem;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.25;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+      pre {
+        background: #f6f8fa;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow: auto;
+      }
+      @media (prefers-color-scheme: dark) {
+        pre {
+          background: #0b0e14;
+        }
+        a {
+          color: #7cb7ff;
+        }
+      }
+      a {
+        color: #1d4ed8;
+      }
+      .muted {
+        color: #64748b;
+        font-size: 0.9em;
+      }
+      .callout {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        color: #1e3a8a;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .callout {
+          background: #0b1733;
+          border-color: #264179;
+          color: #c6d5ff;
+        }
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Admin & Moderation Guide</h1>
+      <p class="muted">
+        This page mirrors the repository's ADMIN_GUIDE.md for quick reference.
+      </p>
+    </header>
+
+    <section>
+      <h2>1. Environment Configuration</h2>
+      <p>
+        Add the following variables to <code>.env.local</code> (never commit
+        real secrets):
+      </p>
+      <pre><code>VITE_YOUTUBE_API_KEY=YOUR_KEY
+VITE_YOUTUBE_CHANNEL_ID=YOUR_CHANNEL_ID
+VITE_ADMIN_EMAILS=admin1@example.com,admin2@example.com</code></pre>
+      <p>
+        <strong>VITE_ADMIN_EMAILS</strong> is a comma separated list. On a
+        user’s first login:
+      </p>
+      <ul>
+        <li>
+          If their email is in this list they receive
+          <code>role: 'admin'</code> and <code>vetted: true</code>.
+        </li>
+        <li>
+          Otherwise they receive <code>role: 'member'</code> and
+          <code>vetted: false</code> (pending vetting).
+        </li>
+      </ul>
+      <p>
+        Restart the dev server after editing <code>.env.local</code> so Vite
+        reloads values.
+      </p>
+
+      <div class="callout">
+        <strong
+          >Admin allowlist in Firestore (recommended for existing users)</strong
+        >
+        <ul>
+          <li>
+            Create a document at <code>/config/adminAllowlist</code> with a map
+            field <code>emails</code>.
+          </li>
+          <li>
+            Add entries like <code>emails.&lt;your-email&gt; = true</code>.
+          </li>
+          <li>
+            On next login, rules permit secure self-escalation to admin for
+            allowlisted emails.
+          </li>
+        </ul>
+        <p class="muted">
+          You can also seed via the provided script:
+          <code>npm run seed:admins</code> (ensure rules permit or use console
+          for production).
+        </p>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>2. Firestore Data Model</h2>
+      <ul>
+        <li>
+          <code>users/{uid}</code>:
+          <code>{ email, role, vetted, createdAt }</code>
+        </li>
+        <li>
+          <code>prayerRequests/{id}</code>:
+          <code
+            >{ text, userId, userEmail, createdAt, createdAtMillis, updatedAt,
+            isVetted }</code
+          >
+        </li>
+      </ul>
+      <p>
+        Denormalizing <code>isVetted</code> on each prayer request allows simple
+        rule checks.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Vetting Workflow</h2>
+      <ol>
+        <li>
+          Unvetted members can submit prayer requests. Only they and admins see
+          them.
+        </li>
+        <li>Admin vets the user at the bottom of the Members section.</li>
+        <li>
+          Vetting sets <code>users/{uid}.vetted = true</code> and cascades
+          existing requests to <code>isVetted: true</code>.
+        </li>
+        <li>
+          Unvetting only flips the user flag (no reverse cascade by default).
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>4. Roles</h2>
+      <p>
+        <strong>admin</strong> can vet/unvet, promote/demote, delete any
+        request.
+      </p>
+      <p>
+        <strong>member</strong> can create, and edit/delete only their own
+        requests.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Firestore Rules (Summary)</h2>
+      <ul>
+        <li>Read prayer requests if vetted OR owner OR admin.</li>
+        <li>Create requires required fields and consistency.</li>
+        <li>
+          Owner updates limited to changing <code>text</code> and
+          <code>updatedAt</code>.
+        </li>
+        <li>
+          Admin updates can adjust <code>isVetted</code> or other moderation
+          fields.
+        </li>
+        <li>
+          Users: admins or self may read; admins can update vetted/role;
+          allowlist-based self-escalation supported.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Leaders Section features</h2>
+      <ul>
+        <li>
+          Keyboard-navigable tabs, accessible search, highlight matches,
+          lazy-loaded images, focus-trapped modal.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. YouTube Error Handling</h2>
+      <p>
+        Use <code>classifyYouTubeError(error)</code> from
+        <code>src/lib/youtube.js</code> for friendly messages.
+      </p>
+    </section>
+
+    <footer>
+      <hr />
+      <p class="muted">Last updated: 2025-09-17</p>
+    </footer>
+  </body>
+</html>

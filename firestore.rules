@@ -1,0 +1,73 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User profiles: created on first login
+    match /users/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId &&
+        request.resource.data.keys().hasAll(['email','createdAt','vetted','role']) &&
+        request.resource.data.email is string && request.resource.data.vetted is bool && request.resource.data.role is string;
+      allow read: if request.auth != null; // any authenticated user can see vetting status
+      // User can update only vetted flag is untouched (admin changes it) and cannot escalate role
+      allow update: if request.auth != null && request.auth.uid == userId &&
+        !(('role' in request.resource.data) && request.resource.data.role != resource.data.role) &&
+        !(('vetted' in request.resource.data) && request.resource.data.vetted != resource.data.vetted);
+
+      // Self-escalation is allowed ONLY if email is on allowlist document
+      // Path: /config/adminAllowlist { emails: { "admin@example.com": true } }
+      // This permits setting role: 'admin' and vetted: true in the same update.
+      allow update: if request.auth != null && request.auth.uid == userId &&
+        // Must be exact change to admin + vetted true
+        request.resource.data.role == 'admin' && request.resource.data.vetted == true &&
+        // Email and createdAt must remain unchanged
+        request.resource.data.email == resource.data.email &&
+        request.resource.data.createdAt == resource.data.createdAt &&
+        // Email must exist on allowlist
+        get(/databases/$(database)/documents/config/adminAllowlist).data.emails[request.auth.token.email] == true;
+      // Admin (role == 'admin') can update vetted or role
+      allow update: if request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    // Prayer requests collection
+    match /prayerRequests/{requestId} {
+      // Read allowed for:
+      // - Owner of the request
+      // - Any vetted user (their users/{uid}.vetted == true)
+      // - Admin role
+      allow read: if request.auth != null && (
+        request.auth.uid == resource.data.userId ||
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) && (
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.vetted == true
+        )
+      );
+
+      allow create: if request.auth != null &&
+        request.resource.data.keys().hasAll(['text','createdAt','userId','userEmail','isVetted','createdAtMillis']) &&
+        request.resource.data.userId == request.auth.uid &&
+        request.resource.data.text is string && request.resource.data.text.size() <= 1000 &&
+        request.resource.data.isVetted is bool;
+
+      // Owner can update text only (edit) if not exceeding length
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId &&
+        request.resource.data.text is string && request.resource.data.text.size() <= 1000 &&
+        // Immutable fields must stay same
+        request.resource.data.userId == resource.data.userId &&
+        request.resource.data.userEmail == resource.data.userEmail &&
+        request.resource.data.createdAt == resource.data.createdAt &&
+        request.resource.data.isVetted == resource.data.isVetted;
+
+      // Admin may toggle isVetted on existing docs
+      allow update: if request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+
+      allow delete: if request.auth != null && (
+        request.auth.uid == resource.data.userId || (
+          exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'
+        )
+      );
+    }
+  }
+}
