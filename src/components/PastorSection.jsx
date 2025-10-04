@@ -1,7 +1,7 @@
 import React from "react";
 import { Heart, Book, Users, Mail } from "lucide-react";
 import Button from "./Button";
-import pastorImg from "../assets/D_Bickings.png";
+import pastorImg from "../assets/D_Bickings.jpg";
 
 const PastorSection = ({ setActiveSection }) => {
   return (

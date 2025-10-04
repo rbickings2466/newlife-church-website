@@ -1,11 +1,11 @@
 // Structured leaders data. Replace photo paths with real images placed in /src/assets or /public.
 // roleType: 'elder' | 'deacon'
 // Optional links: { email?, linkedin?, facebook?, twitter? }
-import dickBickingsImg from "../assets/D_Bickings.png";
+import dickBickingsImg from "../assets/D_Bickings.jpg";
 import rickPetreccaImg from "../assets/r_petrecca.jpg";
 import tomLioyImg from "../assets/t_lioy.jpg";
 import georgeKingImg from "../assets/g_king.jpg";
-import rogerBishopImg from "../assets/r_bishop.png";
+import rogerBishopImg from "../assets/r_bishop.jpg";
 import steveHillriegelImg from "../assets/s_hillriegel.jpg";
 
 export const leaders = [

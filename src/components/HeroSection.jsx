@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Youtube, Cross } from "lucide-react";
 import Button from "./Button";
 import GospelModal from "./GospelModal";
-import heroBg from "../assets/nl_santuary_wide.png";
+import heroBg from "../assets/nl_santuary_wide.jpg";
 
 const HeroSection = ({ setActiveSection }) => {
   const [isGospelModalOpen, setIsGospelModalOpen] = useState(false);

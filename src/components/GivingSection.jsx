@@ -13,8 +13,8 @@ import {
   QrCode,
 } from "lucide-react";
 import Button from "./Button";
-import text2giveQR from "../assets/text2give-qr-code.png";
-import mobileAppQR from "../assets/qrcode.png";
+import text2giveQR from "../assets/text2give-qr-code.jpg";
+import mobileAppQR from "../assets/qrcode.jpg";
 
 const GivingSection = () => {
   const [showTaxInfo, setShowTaxInfo] = useState(false);
