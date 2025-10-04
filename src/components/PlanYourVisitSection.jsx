@@ -95,7 +95,7 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
     {
       question: "What about my kids?",
       answer:
-        "Children are welcome in the worship service. We also offer Sunday School at 9:30 AM and children's ministry during the service for ages 3-12. A nursery is available for younger children.",
+        "Children are welcome in the worship service. We also offer Children's Church midway through the service for ages 3-12. A nursery is available for younger children.",
     },
     {
       question: "What if I'm not a Christian?",
