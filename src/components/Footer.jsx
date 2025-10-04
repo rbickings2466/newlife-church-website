@@ -6,7 +6,7 @@ export default function Footer({ setActiveSection }) {
           <div>
             <div className='mb-4'>
               <img
-                src='/NL_Logo_300.png'
+                src='/NL_Logo_300.jpg'
                 className='h-20 w-auto mb-4'
                 alt='New Life Bible Fellowship Church Logo'
               />
