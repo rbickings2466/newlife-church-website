@@ -1,9 +1,11 @@
-import React from "react";
-import { Youtube } from "lucide-react";
+import React, { useState } from "react";
+import { Youtube, Cross } from "lucide-react";
 import Button from "./Button";
+import GospelModal from "./GospelModal";
 import heroBg from "../assets/nl_santuary_wide.png";
 
 const HeroSection = ({ setActiveSection }) => {
+  const [isGospelModalOpen, setIsGospelModalOpen] = useState(false);
   return (
     <section
       className='relative text-white overflow-hidden bg-cover bg-center bg-no-repeat'
@@ -21,6 +23,14 @@ const HeroSection = ({ setActiveSection }) => {
             "To pursue God's glory in all things among all people"
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mt-8'>
+            <Button
+              size='lg'
+              onClick={() => setIsGospelModalOpen(true)}
+              className='transform hover:scale-105 transition-transform duration-200 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold'
+            >
+              <Cross className='w-5 h-5 mr-2' />
+              Learn About the Gospel
+            </Button>
             <Button
               size='lg'
               onClick={() => setActiveSection("about")}
@@ -43,6 +53,11 @@ const HeroSection = ({ setActiveSection }) => {
               Watch Live Service
             </Button>
           </div>
+
+          <GospelModal
+            isOpen={isGospelModalOpen}
+            onClose={() => setIsGospelModalOpen(false)}
+          />
         </div>
       </div>
 
