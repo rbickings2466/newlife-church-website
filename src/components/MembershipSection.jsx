@@ -263,6 +263,7 @@ const MembershipSection = ({ setActiveSection }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
+              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg"
               onClick={() => setActiveSection("contact")}
             >
               Contact Us
@@ -270,6 +271,7 @@ const MembershipSection = ({ setActiveSection }) => {
             <Button
               size="lg"
               variant="outline"
+              className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100"
               onClick={() =>
                 (window.location.href = "mailto:office@newlifebfcde.org")
               }
