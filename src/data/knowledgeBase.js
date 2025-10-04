@@ -9,7 +9,7 @@ IMPORTANT: You MUST answer questions based ONLY on the information in the docume
 If a question cannot be answered from these documents, politely say: "I don't have that specific information in my knowledge base. Please contact the church office at (302)945-8145 or office@newlifebfcde.org for more details."
 
 ========================================
-DOCUMENT 1: BRIEF HISTORY OF THE BIBLE FELLOWSHIP CHURCH
+DOCUMENT 1: A BRIEF HISTORY OF THE BIBLE FELLOWSHIP CHURCH
 ========================================
 
 The Bible Fellowship Church originated in 1858 as the Evangelische Mennoniten Gemeinschaft (Evangelical Mennonite Society), formed by seven Mennonite revivalists who resisted restrictions on their evangelistic style. This group, led by figures like William Gehman, emphasized enthusiastic evangelism while maintaining Mennonite doctrine.
@@ -18,8 +18,9 @@ New leadership emerged in the late 19th and early 20th centuries, including Will
 A new era began after World War Two, with changes in leadership and a growing divergence from other Mennonite Brethren in Christ conferences. In 1952, the Pennsylvania Conference separated from the other conferences due to doctrinal, ecclesiological, and programmatic differences.
 Finally, in 1959, the Conference adopted its current name, the Bible Fellowship Church. This stage involved the ratification of new articles of faith, the dropping of practices like feet washing, and a shift in church governance. Camp meetings, homes for the aged, and a focus on a biblical basis for all denominational facets were also important features of this period. The church, which began as a loose association of Mennonite revivalists, has evolved into a Reformed fellowship holding to believers' baptism, with a presbyterial structure of government and continued efforts in church planting and education.
 
+
 ========================================
-DOCUMENT 2: NEW LIFE BIBLE FELLOWSHIP CHURCH INFORMATION
+DOCUMENT 2: KNOWLEDGE DOCUMENT FOR THE ASK NEW LIFE GEM
 ========================================
 
 New Life Bible Fellowship Church: Knowledge Document for AI Gem
@@ -73,8 +74,238 @@ New Life Bible Fellowship Church: Knowledge Document for AI Gem
    * Elders: Richard Petrecca, Tom Lioy
    * Deacons: Roger Bishop, Steve Hillriegel, Allen Lavoie
 
+
 ========================================
-DOCUMENT 3: BFC ARTICLES OF FAITH & BIBLICAL PRINCIPLES
+DOCUMENT 3: MEN AND WOMEN ROLES REV2
+========================================
+
+ROLES OF MEN AND WOMEN WITHIN THE CHURCH
+
+
+INTRODUCTION
+
+
+In all of life, Christ is the supreme authority and guide for men and women, so that no earthly submission (domestic, religious, or civil) ever implies a mandate to follow a human authority into sin. (Dan 3:10-18; Acts 4:19-20, 5:27-29; 1 Pet 3:1-2).
+
+
+In both men and women, a heartfelt sense of call to ministry should never be used to set aside Biblical criteria for particular ministries (1 Tim 2:11-15, 3:1-13; Tit 1:5-9). Rather, Biblical teaching should remain the authority for testing our subjective discernment of God’s will.
+No man or woman who feels a passion from God to make His grace known in word and deed need ever live without a fulfilling ministry for the glory of Christ and the good of this fallen world. (1 Cor 12:7-21).
+
+
+We are convinced that a denial or neglect of these principles will lead to increasingly destructive consequences in our families, our churches, and the culture at large.
+
+
+The roles of men and women within the church, as defined by Scripture, have come under fierce debate in modern times.  People usually fall into one of the two sides of the issue.  They either believe that the roles of men and women are equal[1] in all things or that they have been given specific roles that are complementary[2] to one another.  This tends to polarize people when discussing the issue.  The scriptural response is that the answer to this issue is BOTH.  Men and women are equal when standing before God and complement each other in their roles as co-workers in the family and in the church.  
+
+
+Scripture defines how these two concepts can coexist.  The triune God shows us that there are three persons in one God.  Each of these, Father, Son, and Holy Spirit are one hundred percent God.  However, each of them is unique and has a different role in creation and in our salvation.  God the Father and the Holy Spirit are no less God by not being the one who died on the cross for our salvation.  God the Father and the Son are no less God by the Holy Spirit helping the church by distributing the Spiritual Gifts.  Thus, the members of the triune God complement each other and are equal.  In like manner men and women have complementary roles to complete a family and to complete the church.  In God’s pre-fall mathematics, one plus one equals one.  (Gen 2:24)
+
+
+Let us first look at what Scripture teaches about how men and women are equal before God.  Then we will look at how men and women complement each other in their God given roles within the family and the church.  Finally, we will look at what Scripture says to us about how this is implemented in the local body to form a cohesive body of Christ in a church that He can use to fulfill His mandate of making disciples.
+
+
+EQUALITY IN CHRIST
+
+
+Genesis tells us of the high value God has placed upon both man and woman.  During the creation God created both man and woman equally in His own image (Gen 1: 26-27).  Woman was created as a helper and an equal to man. (Gen 1:26-27; Gen 2:18).  
+
+
+At the fall both man and woman experienced the same consequence of death. (Gen 3:19; 1 Cor 15:22).
+
+
+After salvation, both man and woman are equal.  Paul makes this very clear in Galatians when he states “for all who are baptized into Christ” there is no distinction between male or female.  We stand before God the same, in our salvation earned by Christ. (Gal 3:26-29)
+
+
+In passing out grace, talents, and spiritual gifts, God does not distinguish between men and women as parts of the body of Christ.  Scripture does not exclude women.  (1 Cor 12:1-30; Eph 4:7-16; Col 3:5-17)
+
+
+Throughout the New Testament Paul, when writing to believers, addresses them as “Brethren”. A term in the Greek that encompasses both men and women. (Phil 1:14; Phil 4:4-9; Col 4:15)
+
+
+Therefore, both the Old Testament, before and after the fall, and the New Testament considered men and women to be equal before God.
+
+
+COMPLEMENTARY ROLES IN THE CHURCH
+
+
+Scripture describes the pre-fall roles in the creation order.  Man was created first then Eve as his helpmate (Gen 2:18, 21-24; 1 Cor 11:7-16; 1 Tim 2:12-14).  In the ordained pre-fall state, this would not have been a problem.  However, when we look at the three curses that are given toward the roles and relationship of men and women, the fall changed this relationship.
+
+
+In Genesis 3: 16-19 Scripture says:
+
+
+To the woman He said,
+“I will greatly multiply
+Your pain in childbirth,
+In pain you shall deliver children;
+Yet your desire will be for your husband,
+And he shall rule over you.”
+Then to Adam He said, “Because you have listened to the voice of your wife, and have eaten from the tree about which I commanded you, saying, ‘You shall not eat from it’;
+Cursed is the ground because of you;
+With hard labor you shall eat from it
+All the days of your life.
+Both thorns and thistles it shall grow for you;
+Yet you shall eat the plants of the field;
+By the sweat of your face
+You shall eat bread,
+Until you return to the ground,
+Because from it you were taken;
+For you are dust,
+And to dust you shall return.”
+ 
+
+
+This passage gives us a picture of the pre-fall roles of the man and woman along with a glimpse of their relationship.  The pre-fall role of the woman was that of nurturing and the delivering and caring for the family.  The curse for the woman will now make her role much more difficult as mentioned by the “pain in childbirth”.  The pre-fall role of the man was as the provider.  Again, his responsibility to fulfill his role will now become more difficult and only be accomplished “by the sweat of your face”.  Thirdly, the relationship between the man and woman will become more complicated.  The natural order that God instituted with the man as the head of the family will be challenged by the wife with the desire to usurp that headship.
+
+
+In the home, the loving husband who leads with love, support, gentleness, humility, and a desire to be Christlike, is replaced by domination or passivity; the wife tends to replace gentle, humble, loving submission with usurpation or servitude. 
+
+
+A loving husband stands in contrast to “chauvinism,” which is the sinful tendency to demean women, treating them as less valuable than men, and to dominate harshly over women in the name of male headship.  The opposite distortion of God’s design happens when men become passive, refusing to lead in the church and the home according to their role as head. Women too distort God’s design when they become entirely passive and unengaged in the church and home, acting as a mere spectator rather than a joint “heir of the grace of life” (1 Pet. 3:7).
+
+
+In the church, this post-fall curse is demonstrated by men who look for worldly love of power or an abdication of spiritual responsibility.  We also see women who are ready to live without using their gifts in appropriate ministries or trying to resist their God-given roles and to fill the voids created by men who do not perform their God-given responsibilities.
+
+
+If we look at the two accounts of Jesus’ birth in the Gospels of Matthew and Luke, we can see how God has emphasized the roles of men and women. (Mat 2: 1-23 and Luke 2:1-20)  Joseph is given a vision to take the family to Egypt.  He is the one that is directed to be the protector and the provider of safety.  With the three gifts of the Magi, God has even furnished the means to accomplish this task.  In Luke, we are given a glimpse of where Mary’s gifts are directed, “Mary treasured all these things, pondering them in her heart.”
+
+
+Job in the Old Testament was another example of a man who led his family in the correct spiritual direction.  (Job 1:1-5) Job was aware that his role was to look after the spiritual wellbeing of his family.  Therefore, Job constantly offered burnt offerings, because “perhaps my sons have sinned and cursed God in their hearts.”
+
+
+The headship of the husband/father in the household is also demonstrated in Numbers 30:1-16.  A husband or father has the final say in all vows/commitments that the family makes.
+
+
+Even though the primary responsibilities outlined in scripture: the husband is the head and the provider; the woman the child bearer and family nurturer; these roles can overlap.  This can be demonstrated by looking at what Job did in Job chapters 29 through 31 and Prov 31. Also, by looking at Proverbs 31, a woman’s primary responsibility is the care of the family.  However, as seen in Proverbs 31, her roles can go beyond the four walls of the house.
+
+
+This same primary role of the woman, caring for the family, can be seen in the New Testament.  1 Tim 2:15 is a direct reference to the curse placed on the woman in the book of Genesis.  This indicates that childbirth is directly connected to her sanctification and her faith.  In 2 Timothy 1:3-5, both Timothy’s mother and grandmother are praised for their raising of Timothy.
+
+
+Redemption in Christ aims to remove the distortions in our relationship between men and women that accompany the curses of Genesis. In the family, husbands should forsake harsh or selfish leadership and grow in love and care for their wives; wives should forsake resistance to their husbands’ authority and grow in willing, joyful submission to their husbands’ leadership. (Eph 5:21-33; Col 3:18-19; Tit 2:1-5; 1 Pet 3:1-7).
+
+
+Likewise, the scripture gives us guidance for the structure and orderly operation of His church. In the church, redemption in Christ gives men and women an equal share in the blessings of salvation; nevertheless, some governing and teaching roles within the church are restricted to men. (Gal 3:28; 1 Cor 11:2-16; 1 Tim 2:11-3:13; Titus 1:5-9; 1 Peter 3:7).
+
+
+We must keep in mind that God, in His providence, has chosen us to be a part of His body.  He has given us the gifts we need to fully function within His body and where He wants us to serve. (Rom 12: 3-8).  We do not know God’s complete plan but we should trust that He knows what He is doing (Rom 9:19-21).  Both men and women are given the gifts each needs to fulfil His plan in the redemption of the Elect. (1 Cor 12:1-31; Eph 4:7-16; Col 3:5-17).  
+
+
+Both the Old and New Testaments affirm the principle of male headship in the family and in the covenant community. (Gen 2:18; Eph 5:21-33; Col 3:18-25; 1 Tim 2:11-15).
+
+
+In Ephesians 5:22-24, Paul instructs wives by saying:
+
+
+Wives, be subject to your own husbands, as to the Lord.  For the husband is the head of the wife, as Christ also is the head of the church, He Himself being the Savior of the body.  But as the church is subject to Christ, so also the wives ought to be to their husbands in everything.
+
+
+Wives are commanded to “submit” (hypotasso) to their husbands, which means to take a subordinate role in relation to authority. The Greek voice that is used here implies voluntary submission. The command is for a wife to submit herself willingly and joyfully to the authority of her husband, which is a part of her submission to the Lord. The reasons for this command according to Paul are: (1) the husband is the “head” (kephale) of his wife, which refers to a position of authority, and (2) her submission was designed by God to display the proper response of the church to Christ (cf. 5:32). Wives are to submit to their “own husbands,” rather than men in general, “in everything.”
+
+
+In Ephesians 5:25-30, Paul instructs husbands by saying:
+
+
+Husbands, love your wives, just as Christ also loved the church and gave Himself up for her, so that He might sanctify her, having cleansed her by the washing of water with the word, that He might present to Himself the church in all her glory, having no spot or wrinkle or any such thing; but that she would be holy and blameless. So, husbands also ought to love their own wives as their own bodies. He who loves his own wife loves himself; for no one ever hated his own flesh, but nourishes and cherishes it, just as Christ also does the church, because we are parts of His body.
+
+
+The Husband should love his wife with the same covenant love Jesus has for His bride, the Church. Also, Paul makes it clear that the husband should give his wife no reason to regret his position of authority. His leadership is to be self-sacrificing, more analogous to the good shepherd of Psalm 23 than to tyranny or apathy.
+
+
+In the leadership role, the husband has a responsibility to seek his wife’s help, input, and counsel while making decisions for the family. In Genesis 2:18 God says, “It is not good that the man should be alone; I will make him a helper fit for him.” This statement implies that husbands need the help of their wives if they are to lead their homes successfully. When a husband ignores his wife’s counsel or fails to seek her help, he acts as if he knows better than God by rejecting the helper God said he needed.
+
+
+Paul’s teachings are built upon and consistent with God’s original design before the fall in Eden, where Adam is given the role of leader (Gen. 2:18, 22-23; 3:1, 9; 1 Cor. 11:9) and Eve is given the role of helper (Gen. 2:18). Since the roles of husbands and wives are rooted in creation and are designed to display the Gospel, they transcend culture and apply to all marriages at all times.
+  
+In the family, even though the man is the head, more relationships are outlined in Ephesians 6:1-19.  Guidelines for Godly living and our behavior toward everyone both inside and outside the church are listed in 1 Peter 3:1-12 and Titus 2:1-15.
+
+
+Within the covenant community, God has also given us guidelines.  These guidelines help us keep structure and order within His church. Throughout the first century church there were problems with order within the body and during the times of worship. Therefore, the order and use of spiritual gifts are outlined in 1 Cor 14:1-40.   Guidelines for an orderly worship service and responsibilities are given in 1 Cor 11:2-16. Our personal presentation to the world around us is addressed. 1 Tim 2:1-15.
+
+
+In 1 Timothy 2:11-14, Paul writes:
+
+
+A woman must quietly receive instruction with entire submissiveness.  But I do not allow a woman to teach or to exercise authority over a man, but to remain quiet.  For it was Adam who was first created, and then Eve.  And it was not Adam who was deceived, but the woman was deceived and became a wrongdoer.
+
+
+The gender roles of the home correlate with gender roles in the local church. One implication of this passage is that the office of pastor/elder is reserved only for men in the church. This is in line with Paul’s instructions regarding qualifications of elders and deacons, all of which assume a male subject (1 Tim. 3:1-16; Titus 1:5-9).
+
+
+Further, this passage teaches that women are not to hold official teaching positions over men in the church. Within these boundaries, women are free to serve in a variety of ways within the church. Women with the gift of teaching should steward their gift to teach other women as well as the next generation of children in the church. These prescriptions apply specifically to the gathered body and not necessarily to life outside the church (1 Tim. 3:15). Men would certainly be wise to learn from women in a vast number of situations (Acts 18:26). The prohibition in this passage is against women teaching men publicly in formal church gatherings.
+
+
+It is important to note that Paul bases his prohibitions in the creation account rather than the local church in Ephesus, or a lack of women’s education in the first century, or the supposed problems of heretical female teachers. Thus, the prohibitions are conveyed as universal commands.
+
+
+In Scripture God gives us two offices for the care of His church.  These two offices are Elders and Deacons.  The Elders are chosen by God to guide the spiritual wellbeing of His church.  The office of Deacon is chosen by God to look after the physical needs of His church.  
+
+
+The qualifications for the office of Elder in the local church are outlined in 1 Timothy 3: 1-7 and Titus 1:5-9.  The qualifications for the office of Deacon are outlined in 1 Timothy 3:8-16.  In looking at the qualifications for both of these offices, the scripture is clear that these offices are to be filled by men called by God.  However, the servant attitude of the office of Deacon is not limited to men.  Either men or women may serve in the local church without being in the office of Deacon. (Rom 16:1-2)
+
+
+
+
+WITHIN NEW LIFE BIBLE FELLOWSHIP CHURCH
+
+
+At New Life Bible Fellowship Church, we highly value both men and women in the church and the home, and we affirm the vital roles both play in the health and success of ministry. God has given both men and women a significant role to perform in society, the church, and the home. We want to encourage and empower both men and women to be all that God has called them to be, fully functioning in their God-given roles for the sake of God’s kingdom and glory. Because of this, we hold to the biblical teaching commonly referred to as “complementarianism.”
+
+
+MEN LEADING WITHIN NEW LIFE BFC
+
+
+Since only men qualify for the offices of Elder or Deacon and since men are the head of the family and with love serve as the head of their wives, the following services within the church are limited to men:
+* Preaching
+* Leading a worship service where men are present.
+* Interpreting scripture in a gathering containing men.
+* Conducting bible studies which contain men participants.
+* Conducting prayer groups which contain men.
+
+
+WOMEN LEADING WITHIN NEW LIFE BFC
+
+
+Those church activities that can be led by women, under the supervision of an Elder, (as the ones responsible before God), are:
+* Bible studies containing only women and children under the age of 18.
+* Prayer meetings containing only women and children under the age of 18.
+* Church gatherings where only women are present.
+
+
+MEN OR WOMEN WITHIN NEW LIFE BFC
+
+
+Those activities, under the supervision of the Elders, (as the ones responsible before God), that both men and women can participate are:
+* Praying in a public prayer meeting where both men and women are present and is led by men.
+* Reading scripture in a public gathering or worship service without giving an interpretation of scripture.
+* Singing in a public worship service or gathering where men are present.
+* Asking questions and participating in a bible study conducted with both men and women but being led by a man.
+* Giving their testimonies 
+
+
+EVANGELISM WITHIN NEW LIFE BFC
+
+
+Evangelism and witnessing to a non-believer for the purpose of bringing them to the saving grace of God may be conducted by either a man or a woman.
+
+
+OTHER ACTIVITIES WITHIN NEW LIFE BFC
+
+
+All other activities that are conducted by the church are to be evaluated on a case-by-case basis by the Elders of the church.
+
+
+
+
+
+
+________________
+[1] Egalitarianism
+[2] Complementarianism
+
+
+========================================
+DOCUMENT 4: SUMMARY OF BFC AOF AND BPL
 ========================================
 
 SUMMARY: BIBLE FELLOWSHIP CHURCH - ARTICLES OF FAITH & BIBLICAL PRINCIPLES FOR LIVING
@@ -894,231 +1125,235 @@ practical guide for church life and governance within the Bible Fellowship Churc
 END OF SUMMARY
 ================================================================================
 
+
 ========================================
-DOCUMENT 4: ROLES OF MEN AND WOMEN WITHIN THE CHURCH
+DOCUMENT 5: THE GOSPEL_ GOD'S PLAN OF SALVATION
 ========================================
 
-ROLES OF MEN AND WOMEN WITHIN THE CHURCH
+# The Gospel: God's Plan of Salvation
 
 
-INTRODUCTION
+## Introduction
 
 
-In all of life, Christ is the supreme authority and guide for men and women, so that no earthly submission (domestic, religious, or civil) ever implies a mandate to follow a human authority into sin. (Dan 3:10-18; Acts 4:19-20, 5:27-29; 1 Pet 3:1-2).
+The word "gospel" means "good news." The gospel is the good news of what God has done to save humanity through Jesus Christ. This document explains the core message of the Christian faith with supporting scriptures from the Bible.
 
 
-In both men and women, a heartfelt sense of call to ministry should never be used to set aside Biblical criteria for particular ministries (1 Tim 2:11-15, 3:1-13; Tit 1:5-9). Rather, Biblical teaching should remain the authority for testing our subjective discernment of God’s will.
-No man or woman who feels a passion from God to make His grace known in word and deed need ever live without a fulfilling ministry for the glory of Christ and the good of this fallen world. (1 Cor 12:7-21).
+---
 
 
-We are convinced that a denial or neglect of these principles will lead to increasingly destructive consequences in our families, our churches, and the culture at large.
+## 1. God's Design: Creation and Purpose
 
 
-The roles of men and women within the church, as defined by Scripture, have come under fierce debate in modern times.  People usually fall into one of the two sides of the issue.  They either believe that the roles of men and women are equal[1] in all things or that they have been given specific roles that are complementary[2] to one another.  This tends to polarize people when discussing the issue.  The scriptural response is that the answer to this issue is BOTH.  Men and women are equal when standing before God and complement each other in their roles as co-workers in the family and in the church.  
+**God created humanity in His image for a relationship with Him.**
 
 
-Scripture defines how these two concepts can coexist.  The triune God shows us that there are three persons in one God.  Each of these, Father, Son, and Holy Spirit are one hundred percent God.  However, each of them is unique and has a different role in creation and in our salvation.  God the Father and the Holy Spirit are no less God by not being the one who died on the cross for our salvation.  God the Father and the Son are no less God by the Holy Spirit helping the church by distributing the Spiritual Gifts.  Thus, the members of the triune God complement each other and are equal.  In like manner men and women have complementary roles to complete a family and to complete the church.  In God’s pre-fall mathematics, one plus one equals one.  (Gen 2:24)
+In the beginning, God created the world and everything in it, including the first humans, Adam and Eve. He created them to live in perfect relationship with Him.
 
 
-Let us first look at what Scripture teaches about how men and women are equal before God.  Then we will look at how men and women complement each other in their God given roles within the family and the church.  Finally, we will look at what Scripture says to us about how this is implemented in the local body to form a cohesive body of Christ in a church that He can use to fulfill His mandate of making disciples.
+**Key Scriptures:**
+- **Genesis 1:27** - "So God created man in his own image, in the image of God he created him; male and female he created them."
+- **Genesis 1:31** - "And God saw everything that he had made, and behold, it was very good."
+- **Colossians 1:16** - "For by him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities—all things were created through him and for him."
 
 
-EQUALITY IN CHRIST
+---
 
 
-Genesis tells us of the high value God has placed upon both man and woman.  During the creation God created both man and woman equally in His own image (Gen 1: 26-27).  Woman was created as a helper and an equal to man. (Gen 1:26-27; Gen 2:18).  
+## 2. The Problem: Sin and Separation
 
 
-At the fall both man and woman experienced the same consequence of death. (Gen 3:19; 1 Cor 15:22).
+**Sin entered the world and separated humanity from God.**
 
 
-After salvation, both man and woman are equal.  Paul makes this very clear in Galatians when he states “for all who are baptized into Christ” there is no distinction between male or female.  We stand before God the same, in our salvation earned by Christ. (Gal 3:26-29)
+Adam and Eve disobeyed God's command, bringing sin into the world. Since then, all people have sinned and fallen short of God's perfect standard. Sin separates us from God and leads to spiritual death.
 
 
-In passing out grace, talents, and spiritual gifts, God does not distinguish between men and women as parts of the body of Christ.  Scripture does not exclude women.  (1 Cor 12:1-30; Eph 4:7-16; Col 3:5-17)
+**Key Scriptures:**
+- **Genesis 3:6-7** - "So when the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was to be desired to make one wise, she took of its fruit and ate, and she also gave some to her husband who was with her, and he ate."
+- **Romans 3:23** - "For all have sinned and fall short of the glory of God."
+- **Romans 6:23** - "For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."
+- **Isaiah 59:2** - "But your iniquities have made a separation between you and your God, and your sins have hidden his face from you so that he does not hear."
+- **Ephesians 2:1** - "And you were dead in the trespasses and sins."
 
 
-Throughout the New Testament Paul, when writing to believers, addresses them as “Brethren”. A term in the Greek that encompasses both men and women. (Phil 1:14; Phil 4:4-9; Col 4:15)
+---
 
 
-Therefore, both the Old Testament, before and after the fall, and the New Testament considered men and women to be equal before God.
+## 3. God's Solution: Jesus Christ
 
 
-COMPLEMENTARY ROLES IN THE CHURCH
+**God sent His Son to bridge the gap between God and humanity.**
 
 
-Scripture describes the pre-fall roles in the creation order.  Man was created first then Eve as his helpmate (Gen 2:18, 21-24; 1 Cor 11:7-16; 1 Tim 2:12-14).  In the ordained pre-fall state, this would not have been a problem.  However, when we look at the three curses that are given toward the roles and relationship of men and women, the fall changed this relationship.
+Because of His great love, God sent Jesus Christ, His only Son, to earth. Jesus lived a perfect, sinless life, died on the cross to pay the penalty for our sins, and rose from the dead three days later, conquering sin and death.
 
 
-In Genesis 3: 16-19 Scripture says:
+### Jesus's Sinless Life
+- **2 Corinthians 5:21** - "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God."
+- **Hebrews 4:15** - "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin."
 
 
-To the woman He said,
-“I will greatly multiply
-Your pain in childbirth,
-In pain you shall deliver children;
-Yet your desire will be for your husband,
-And he shall rule over you.”
-Then to Adam He said, “Because you have listened to the voice of your wife, and have eaten from the tree about which I commanded you, saying, ‘You shall not eat from it’;
-Cursed is the ground because of you;
-With hard labor you shall eat from it
-All the days of your life.
-Both thorns and thistles it shall grow for you;
-Yet you shall eat the plants of the field;
-By the sweat of your face
-You shall eat bread,
-Until you return to the ground,
-Because from it you were taken;
-For you are dust,
-And to dust you shall return.”
- 
+### Jesus's Death for Our Sins
+- **John 3:16** - "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."
+- **Romans 5:8** - "But God shows his love for us in that while we were still sinners, Christ died for us."
+- **1 Peter 3:18** - "For Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit."
+- **Isaiah 53:5-6** - "But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed. All we like sheep have gone astray; we have turned—every one—to his own way; and the LORD has laid on him the iniquity of us all."
 
 
-This passage gives us a picture of the pre-fall roles of the man and woman along with a glimpse of their relationship.  The pre-fall role of the woman was that of nurturing and the delivering and caring for the family.  The curse for the woman will now make her role much more difficult as mentioned by the “pain in childbirth”.  The pre-fall role of the man was as the provider.  Again, his responsibility to fulfill his role will now become more difficult and only be accomplished “by the sweat of your face”.  Thirdly, the relationship between the man and woman will become more complicated.  The natural order that God instituted with the man as the head of the family will be challenged by the wife with the desire to usurp that headship.
+### Jesus's Resurrection
+- **1 Corinthians 15:3-4** - "For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures."
+- **Romans 4:25** - "Who was delivered up for our trespasses and raised for our justification."
+- **Acts 2:24** - "God raised him up, loosing the pangs of death, because it was not possible for him to be held by it."
 
 
-In the home, the loving husband who leads with love, support, gentleness, humility, and a desire to be Christlike, is replaced by domination or passivity; the wife tends to replace gentle, humble, loving submission with usurpation or servitude. 
+---
 
 
-A loving husband stands in contrast to “chauvinism,” which is the sinful tendency to demean women, treating them as less valuable than men, and to dominate harshly over women in the name of male headship.  The opposite distortion of God’s design happens when men become passive, refusing to lead in the church and the home according to their role as head. Women too distort God’s design when they become entirely passive and unengaged in the church and home, acting as a mere spectator rather than a joint “heir of the grace of life” (1 Pet. 3:7).
+## 4. Our Response: Faith and Repentance
 
 
-In the church, this post-fall curse is demonstrated by men who look for worldly love of power or an abdication of spiritual responsibility.  We also see women who are ready to live without using their gifts in appropriate ministries or trying to resist their God-given roles and to fill the voids created by men who do not perform their God-given responsibilities.
+**Salvation comes through faith in Jesus Christ, not by our own works.**
 
 
-If we look at the two accounts of Jesus’ birth in the Gospels of Matthew and Luke, we can see how God has emphasized the roles of men and women. (Mat 2: 1-23 and Luke 2:1-20)  Joseph is given a vision to take the family to Egypt.  He is the one that is directed to be the protector and the provider of safety.  With the three gifts of the Magi, God has even furnished the means to accomplish this task.  In Luke, we are given a glimpse of where Mary’s gifts are directed, “Mary treasured all these things, pondering them in her heart.”
+We cannot save ourselves through good deeds or religious activities. Salvation is a free gift from God that we receive by faith. This involves:
 
 
-Job in the Old Testament was another example of a man who led his family in the correct spiritual direction.  (Job 1:1-5) Job was aware that his role was to look after the spiritual wellbeing of his family.  Therefore, Job constantly offered burnt offerings, because “perhaps my sons have sinned and cursed God in their hearts.”
+### Faith in Jesus
+Believing that Jesus is the Son of God, that He died for your sins, and that He rose from the dead.
 
 
-The headship of the husband/father in the household is also demonstrated in Numbers 30:1-16.  A husband or father has the final say in all vows/commitments that the family makes.
+- **Ephesians 2:8-9** - "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast."
+- **John 1:12** - "But to all who did receive him, who believed in his name, he gave the right to become children of God."
+- **Acts 16:31** - "And they said, 'Believe in the Lord Jesus, and you will be saved, you and your household.'"
+- **John 14:6** - "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'"
 
 
-Even though the primary responsibilities outlined in scripture: the husband is the head and the provider; the woman the child bearer and family nurturer; these roles can overlap.  This can be demonstrated by looking at what Job did in Job chapters 29 through 31 and Prov 31. Also, by looking at Proverbs 31, a woman’s primary responsibility is the care of the family.  However, as seen in Proverbs 31, her roles can go beyond the four walls of the house.
+### Repentance
+Turning away from sin and turning toward God, acknowledging Jesus as Lord of your life.
 
 
-This same primary role of the woman, caring for the family, can be seen in the New Testament.  1 Tim 2:15 is a direct reference to the curse placed on the woman in the book of Genesis.  This indicates that childbirth is directly connected to her sanctification and her faith.  In 2 Timothy 1:3-5, both Timothy’s mother and grandmother are praised for their raising of Timothy.
+- **Acts 3:19** - "Repent therefore, and turn back, that your sins may be blotted out."
+- **Luke 13:3** - "No, I tell you; but unless you repent, you will all likewise perish."
+- **Acts 2:38** - "And Peter said to them, 'Repent and be baptized every one of you in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.'"
+- **Romans 10:9** - "Because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved."
 
 
-Redemption in Christ aims to remove the distortions in our relationship between men and women that accompany the curses of Genesis. In the family, husbands should forsake harsh or selfish leadership and grow in love and care for their wives; wives should forsake resistance to their husbands’ authority and grow in willing, joyful submission to their husbands’ leadership. (Eph 5:21-33; Col 3:18-19; Tit 2:1-5; 1 Pet 3:1-7).
+---
 
 
-Likewise, the scripture gives us guidance for the structure and orderly operation of His church. In the church, redemption in Christ gives men and women an equal share in the blessings of salvation; nevertheless, some governing and teaching roles within the church are restricted to men. (Gal 3:28; 1 Cor 11:2-16; 1 Tim 2:11-3:13; Titus 1:5-9; 1 Peter 3:7).
+## 5. The Result: New Life and Eternal Hope
 
 
-We must keep in mind that God, in His providence, has chosen us to be a part of His body.  He has given us the gifts we need to fully function within His body and where He wants us to serve. (Rom 12: 3-8).  We do not know God’s complete plan but we should trust that He knows what He is doing (Rom 9:19-21).  Both men and women are given the gifts each needs to fulfil His plan in the redemption of the Elect. (1 Cor 12:1-31; Eph 4:7-16; Col 3:5-17).  
+**Those who trust in Christ receive forgiveness, new life, and eternal life with God.**
 
 
-Both the Old and New Testaments affirm the principle of male headship in the family and in the covenant community. (Gen 2:18; Eph 5:21-33; Col 3:18-25; 1 Tim 2:11-15).
+When we place our faith in Jesus, we are forgiven of our sins, adopted into God's family, and given new life through the Holy Spirit. We have the promise of eternal life with God.
 
 
-In Ephesians 5:22-24, Paul instructs wives by saying:
+### Forgiveness and Justification
+- **1 John 1:9** - "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+- **Colossians 1:13-14** - "He has delivered us from the domain of darkness and transferred us to the kingdom of his beloved Son, in whom we have redemption, the forgiveness of sins."
+- **Romans 8:1** - "There is therefore now no condemnation for those who are in Christ Jesus."
 
 
-Wives, be subject to your own husbands, as to the Lord.  For the husband is the head of the wife, as Christ also is the head of the church, He Himself being the Savior of the body.  But as the church is subject to Christ, so also the wives ought to be to their husbands in everything.
+### New Birth and Transformation
+- **2 Corinthians 5:17** - "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come."
+- **John 3:3** - "Jesus answered him, 'Truly, truly, I say to you, unless one is born again he cannot see the kingdom of God.'"
+- **Titus 3:5** - "He saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewal of the Holy Spirit."
 
 
-Wives are commanded to “submit” (hypotasso) to their husbands, which means to take a subordinate role in relation to authority. The Greek voice that is used here implies voluntary submission. The command is for a wife to submit herself willingly and joyfully to the authority of her husband, which is a part of her submission to the Lord. The reasons for this command according to Paul are: (1) the husband is the “head” (kephale) of his wife, which refers to a position of authority, and (2) her submission was designed by God to display the proper response of the church to Christ (cf. 5:32). Wives are to submit to their “own husbands,” rather than men in general, “in everything.”
+### Eternal Life
+- **John 3:36** - "Whoever believes in the Son has eternal life; whoever does not obey the Son shall not see life, but the wrath of God remains on him."
+- **John 10:28** - "I give them eternal life, and they will never perish, and no one will snatch them out of my hand."
+- **1 John 5:11-13** - "And this is the testimony, that God gave us eternal life, and this life is in his Son. Whoever has the Son has life; whoever does not have the Son of God does not have life. I write these things to you who believe in the name of the Son of God, that you may know that you have eternal life."
 
 
-In Ephesians 5:25-30, Paul instructs husbands by saying:
+### Adopted as God's Children
+- **Galatians 3:26** - "For in Christ Jesus you are all sons of God, through faith."
+- **John 1:12** - "But to all who did receive him, who believed in his name, he gave the right to become children of God."
+- **Romans 8:15-16** - "For you did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, 'Abba! Father!' The Spirit himself bears witness with our spirit that we are children of God."
 
 
-Husbands, love your wives, just as Christ also loved the church and gave Himself up for her, so that He might sanctify her, having cleansed her by the washing of water with the word, that He might present to Himself the church in all her glory, having no spot or wrinkle or any such thing; but that she would be holy and blameless. So, husbands also ought to love their own wives as their own bodies. He who loves his own wife loves himself; for no one ever hated his own flesh, but nourishes and cherishes it, just as Christ also does the church, because we are parts of His body.
+---
 
 
-The Husband should love his wife with the same covenant love Jesus has for His bride, the Church. Also, Paul makes it clear that the husband should give his wife no reason to regret his position of authority. His leadership is to be self-sacrificing, more analogous to the good shepherd of Psalm 23 than to tyranny or apathy.
+## 6. The Call: Following Jesus
 
 
-In the leadership role, the husband has a responsibility to seek his wife’s help, input, and counsel while making decisions for the family. In Genesis 2:18 God says, “It is not good that the man should be alone; I will make him a helper fit for him.” This statement implies that husbands need the help of their wives if they are to lead their homes successfully. When a husband ignores his wife’s counsel or fails to seek her help, he acts as if he knows better than God by rejecting the helper God said he needed.
+**Believers are called to follow Jesus as disciples.**
 
 
-Paul’s teachings are built upon and consistent with God’s original design before the fall in Eden, where Adam is given the role of leader (Gen. 2:18, 22-23; 3:1, 9; 1 Cor. 11:9) and Eve is given the role of helper (Gen. 2:18). Since the roles of husbands and wives are rooted in creation and are designed to display the Gospel, they transcend culture and apply to all marriages at all times.
-  
-In the family, even though the man is the head, more relationships are outlined in Ephesians 6:1-19.  Guidelines for Godly living and our behavior toward everyone both inside and outside the church are listed in 1 Peter 3:1-12 and Titus 2:1-15.
+Following Jesus means more than a one-time decision. It involves a lifelong commitment to grow in faith, obey His commands, and share the gospel with others.
 
 
-Within the covenant community, God has also given us guidelines.  These guidelines help us keep structure and order within His church. Throughout the first century church there were problems with order within the body and during the times of worship. Therefore, the order and use of spiritual gifts are outlined in 1 Cor 14:1-40.   Guidelines for an orderly worship service and responsibilities are given in 1 Cor 11:2-16. Our personal presentation to the world around us is addressed. 1 Tim 2:1-15.
+### Growing in Faith
+- **2 Peter 3:18** - "But grow in the grace and knowledge of our Lord and Savior Jesus Christ."
+- **Philippians 1:6** - "And I am sure of this, that he who began a good work in you will bring it to completion at the day of Jesus Christ."
 
 
-In 1 Timothy 2:11-14, Paul writes:
+### Obedience to Christ
+- **John 14:15** - "If you love me, you will keep my commandments."
+- **Matthew 28:19-20** - "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age."
 
 
-A woman must quietly receive instruction with entire submissiveness.  But I do not allow a woman to teach or to exercise authority over a man, but to remain quiet.  For it was Adam who was first created, and then Eve.  And it was not Adam who was deceived, but the woman was deceived and became a wrongdoer.
+### Love for God and Others
+- **Matthew 22:37-39** - "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself.'"
+- **John 13:34-35** - "A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another. By this all people will know that you are my disciples, if you have love for one another."
 
 
-The gender roles of the home correlate with gender roles in the local church. One implication of this passage is that the office of pastor/elder is reserved only for men in the church. This is in line with Paul’s instructions regarding qualifications of elders and deacons, all of which assume a male subject (1 Tim. 3:1-16; Titus 1:5-9).
+---
 
 
-Further, this passage teaches that women are not to hold official teaching positions over men in the church. Within these boundaries, women are free to serve in a variety of ways within the church. Women with the gift of teaching should steward their gift to teach other women as well as the next generation of children in the church. These prescriptions apply specifically to the gathered body and not necessarily to life outside the church (1 Tim. 3:15). Men would certainly be wise to learn from women in a vast number of situations (Acts 18:26). The prohibition in this passage is against women teaching men publicly in formal church gatherings.
+## Summary: The Gospel in Brief
 
 
-It is important to note that Paul bases his prohibitions in the creation account rather than the local church in Ephesus, or a lack of women’s education in the first century, or the supposed problems of heretical female teachers. Thus, the prohibitions are conveyed as universal commands.
+1. **God** created us for relationship with Him
+2. **Humanity** sinned and became separated from God
+3. **Jesus Christ** died for our sins and rose from the dead
+4. **We respond** by believing in Jesus and repenting of sin
+5. **God gives** forgiveness, new life, and eternal life
+6. **We follow** Jesus as His disciples
 
 
-In Scripture God gives us two offices for the care of His church.  These two offices are Elders and Deacons.  The Elders are chosen by God to guide the spiritual wellbeing of His church.  The office of Deacon is chosen by God to look after the physical needs of His church.  
+**Romans 10:13** - "For everyone who calls on the name of the Lord will be saved."
 
 
-The qualifications for the office of Elder in the local church are outlined in 1 Timothy 3: 1-7 and Titus 1:5-9.  The qualifications for the office of Deacon are outlined in 1 Timothy 3:8-16.  In looking at the qualifications for both of these offices, the scripture is clear that these offices are to be filled by men called by God.  However, the servant attitude of the office of Deacon is not limited to men.  Either men or women may serve in the local church without being in the office of Deacon. (Rom 16:1-2)
+---
 
 
+## How to Receive Christ
 
 
-WITHIN NEW LIFE BIBLE FELLOWSHIP CHURCH
+If you sense God calling you to trust in Jesus Christ, you can respond to Him right now through prayer. Prayer is simply talking to God. Here's a sample prayer:
 
 
-At New Life Bible Fellowship Church, we highly value both men and women in the church and the home, and we affirm the vital roles both play in the health and success of ministry. God has given both men and women a significant role to perform in society, the church, and the home. We want to encourage and empower both men and women to be all that God has called them to be, fully functioning in their God-given roles for the sake of God’s kingdom and glory. Because of this, we hold to the biblical teaching commonly referred to as “complementarianism.”
+*"God, I know that I am a sinner and that I need Your forgiveness. I believe that Jesus Christ died for my sins and rose from the dead. I turn from my sins and invite Jesus to come into my heart and life. I want to trust and follow Him as my Lord and Savior. In Jesus' name, Amen."*
 
 
-MEN LEADING WITHIN NEW LIFE BFC
+If you've made this decision, here are important next steps:
+- Tell someone about your decision
+- Find a local church that teaches the Bible
+- Begin reading the Bible (the Gospel of John is a great place to start)
+- Pray regularly, talking with God
+- Get baptized as an act of obedience to Christ
+- Fellowship with other believers
 
 
-Since only men qualify for the offices of Elder or Deacon and since men are the head of the family and with love serve as the head of their wives, the following services within the church are limited to men:
-* Preaching
-* Leading a worship service where men are present.
-* Interpreting scripture in a gathering containing men.
-* Conducting bible studies which contain men participants.
-* Conducting prayer groups which contain men.
+---
 
 
-WOMEN LEADING WITHIN NEW LIFE BFC
+## Additional Resources
 
 
-Those church activities that can be led by women, under the supervision of an Elder, (as the ones responsible before God), are:
-* Bible studies containing only women and children under the age of 18.
-* Prayer meetings containing only women and children under the age of 18.
-* Church gatherings where only women are present.
+**Key Chapters to Read:**
+- **John 3** - Jesus explains being born again
+- **Romans 3-8** - Paul explains the gospel in detail
+- **Ephesians 2** - Salvation by grace through faith
+- **1 Corinthians 15** - The resurrection of Christ
+- **Revelation 21-22** - The promise of eternity with God
 
 
-MEN OR WOMEN WITHIN NEW LIFE BFC
+**"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes."** - Romans 1:16
 
-
-Those activities, under the supervision of the Elders, (as the ones responsible before God), that both men and women can participate are:
-* Praying in a public prayer meeting where both men and women are present and is led by men.
-* Reading scripture in a public gathering or worship service without giving an interpretation of scripture.
-* Singing in a public worship service or gathering where men are present.
-* Asking questions and participating in a bible study conducted with both men and women but being led by a man.
-* Giving their testimonies 
-
-
-EVANGELISM WITHIN NEW LIFE BFC
-
-
-Evangelism and witnessing to a non-believer for the purpose of bringing them to the saving grace of God may be conducted by either a man or a woman.
-
-
-OTHER ACTIVITIES WITHIN NEW LIFE BFC
-
-
-All other activities that are conducted by the church are to be evaluated on a case-by-case basis by the Elders of the church.
-
-
-
-
-
-
-________________
-[1] Egalitarianism
-[2] Complementarianism
 `;
