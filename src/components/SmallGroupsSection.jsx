@@ -242,7 +242,7 @@ const SmallGroupsSection = ({ setActiveSection }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg"
               onClick={() => setActiveSection("contact")}
             >
               Contact Us
@@ -250,12 +250,12 @@ const SmallGroupsSection = ({ setActiveSection }) => {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold"
               onClick={() =>
                 (window.location.href = "mailto:office@newlifebfcde.org")
               }
             >
-              Email Church Office
+              Email Us
             </Button>
           </div>
         </div>
