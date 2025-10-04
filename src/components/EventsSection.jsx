@@ -116,7 +116,7 @@ const EventsSection = () => {
             <div className='grid md:grid-cols-2 gap-6'>
               <div className='bg-blue-900 bg-opacity-50 rounded-lg p-6 border-2 border-white border-opacity-30'>
                 <h4 className='font-semibold text-white text-lg mb-2'>
-                  Sunday School
+                  Adult Sunday School
                 </h4>
                 <p className='text-blue-100 text-lg font-medium'>9:30 AM</p>
               </div>
