@@ -23,7 +23,7 @@ const MembershipSection = ({ setActiveSection }) => {
       icon: Book,
       title: "2. Learn Our Beliefs",
       description:
-        "Familiarize yourself with our statement of faith and understand what we believe about Scripture, salvation, and the church.",
+        "Attend four two-hour membership classes where are church polity, leadership, and doctrine are discussed",
     },
     {
       icon: Users,
@@ -35,7 +35,7 @@ const MembershipSection = ({ setActiveSection }) => {
       icon: UserPlus,
       title: "4. Join the Family",
       description:
-        "Upon approval, you'll be welcomed as a member and publicly affirm your commitment to our church covenant.",
+        "Upon approval and baptism by immersion, you'll be welcomed as a member and publicly affirm your commitment to our church covenant.",
     },
   ];
 
@@ -117,14 +117,14 @@ const MembershipSection = ({ setActiveSection }) => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className='py-16 lg:py-24 bg-gray-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Membership Section */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <div className='text-center mb-16 animate-fade-in'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6'>
             Become a Member
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className='text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed'>
             Church membership is a biblical commitment to a local body of
             believers. It provides accountability, care, and a clear way to
             identify with Christ's church.
@@ -132,21 +132,21 @@ const MembershipSection = ({ setActiveSection }) => {
         </div>
 
         {/* Membership Steps */}
-        <div className="mb-20">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12">
+        <div className='mb-20'>
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12'>
             Path to Membership
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {membershipSteps.map((step, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg text-center border-2 border-gray-100 hover:shadow-xl transition-all hover:scale-105"
+                className='bg-white p-8 rounded-xl shadow-lg text-center border-2 border-gray-100 hover:shadow-xl transition-all hover:scale-105'
               >
-                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-8 h-8" />
+                <div className='w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6'>
+                  <step.icon className='w-8 h-8' />
                 </div>
-                <h4 className="font-bold text-gray-900 mb-3">{step.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h4 className='font-bold text-gray-900 mb-3'>{step.title}</h4>
+                <p className='text-sm text-gray-600 leading-relaxed'>
                   {step.description}
                 </p>
               </div>
@@ -155,27 +155,27 @@ const MembershipSection = ({ setActiveSection }) => {
         </div>
 
         {/* Benefits & Expectations Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+        <div className='grid lg:grid-cols-2 gap-12 mb-20'>
           {/* Benefits */}
           <div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
+            <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-8'>
               Benefits of Membership
             </h3>
-            <div className="space-y-6">
+            <div className='space-y-6'>
               {membershipBenefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow"
+                  className='bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow'
                 >
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <benefit.icon className="w-5 h-5" />
+                  <div className='flex items-start'>
+                    <div className='w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0'>
+                      <benefit.icon className='w-5 h-5' />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <h4 className='font-bold text-gray-900 mb-2'>
                         {benefit.title}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className='text-sm text-gray-600'>
                         {benefit.description}
                       </p>
                     </div>
@@ -187,24 +187,24 @@ const MembershipSection = ({ setActiveSection }) => {
 
           {/* Expectations */}
           <div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
+            <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-8'>
               Membership Expectations
             </h3>
-            <div className="space-y-6">
+            <div className='space-y-6'>
               {membershipExpectations.map((expectation, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow"
+                  className='bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow'
                 >
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <expectation.icon className="w-5 h-5" />
+                  <div className='flex items-start'>
+                    <div className='w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0'>
+                      <expectation.icon className='w-5 h-5' />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <h4 className='font-bold text-gray-900 mb-2'>
                         {expectation.title}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className='text-sm text-gray-600'>
                         {expectation.description}
                       </p>
                     </div>
@@ -216,62 +216,60 @@ const MembershipSection = ({ setActiveSection }) => {
         </div>
 
         {/* Baptism Section */}
-        <div className="mb-20">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 lg:p-12 mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <Droplets className="w-16 h-16 opacity-80" />
+        <div className='mb-20'>
+          <div className='bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 lg:p-12 mb-12'>
+            <div className='flex items-center justify-center mb-6'>
+              <Droplets className='w-16 h-16 opacity-80' />
             </div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-center mb-6">
+            <h3 className='text-2xl lg:text-3xl font-bold text-center mb-6'>
               Baptism
             </h3>
-            <p className="text-blue-100 text-center max-w-3xl mx-auto leading-relaxed">
+            <p className='text-blue-100 text-center max-w-3xl mx-auto leading-relaxed'>
               "We were buried therefore with him by baptism into death, in order
               that, just as Christ was raised from the dead by the glory of the
               Father, we too might walk in newness of life."
             </p>
-            <p className="text-blue-200 text-center text-sm mt-2">
-              Romans 6:4
-            </p>
+            <p className='text-blue-200 text-center text-sm mt-2'>Romans 6:4</p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className='max-w-4xl mx-auto space-y-6'>
             {baptismInfo.map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600"
+                className='bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600'
               >
-                <h4 className="font-bold text-lg text-gray-900 mb-3">
+                <h4 className='font-bold text-lg text-gray-900 mb-3'>
                   {item.question}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                <p className='text-gray-600 leading-relaxed'>{item.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 text-center">
-          <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-6" />
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+        <div className='bg-white rounded-2xl shadow-xl p-8 lg:p-12 text-center'>
+          <CheckCircle className='w-16 h-16 text-green-600 mx-auto mb-6' />
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-6'>
             Ready to Take the Next Step?
           </h3>
-          <p className="text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className='text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed'>
             We'd love to help you explore membership or baptism. Whether you
             have questions or are ready to begin the process, please reach out
             to us.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
-              size="lg"
-              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg"
+              size='lg'
+              className='bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg'
               onClick={() => setActiveSection("contact")}
             >
               Contact Us
             </Button>
             <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100"
+              size='lg'
+              variant='outline'
+              className='border-2 border-gray-300 text-gray-700 hover:bg-gray-100'
               onClick={() =>
                 (window.location.href = "mailto:office@newlifebfcde.org")
               }
