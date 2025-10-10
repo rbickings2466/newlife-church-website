@@ -20,7 +20,7 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
       title: "Sunday School",
       icon: Book,
       description:
-        "Join us for age-appropriate Bible study classes. Adults meet in the Fellowship Hall while children have their own classes.",
+        "Join us for age-appropriate Bible study classes. Adults meet in the Fellowship Hall while children have their own class midway through the Worship Service.",
       color: "bg-blue-50 border-blue-200",
       iconColor: "text-blue-600",
     },
@@ -110,21 +110,21 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className='py-16 lg:py-24 bg-gray-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Hero Section */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <div className='text-center mb-16 animate-fade-in'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6'>
             Plan Your Visit
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className='text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8'>
             We'd love to have you join us for worship! Here's everything you
             need to know for your first visit to New Life Bible Fellowship
             Church.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
-              size="lg"
+              size='lg'
               onClick={() =>
                 window.open(
                   "https://maps.google.com/?q=24771+Cannon+Rd+Millsboro+DE+19966",
@@ -132,47 +132,47 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
                 )
               }
             >
-              <MapPin className="w-5 h-5 mr-2" />
+              <MapPin className='w-5 h-5 mr-2' />
               Get Directions
             </Button>
             <Button
-              variant="secondary"
-              size="lg"
+              variant='secondary'
+              size='lg'
               onClick={() => setActiveSection("contact")}
             >
-              <Heart className="w-5 h-5 mr-2" />
+              <Heart className='w-5 h-5 mr-2' />
               Contact Us
             </Button>
           </div>
         </div>
 
         {/* What to Expect Timeline */}
-        <div className="mb-20">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12">
+        <div className='mb-20'>
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12'>
             What to Expect on Sunday
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className='grid md:grid-cols-3 gap-8'>
             {whatToExpect.map((item, index) => (
               <div
                 key={index}
                 className={`${item.color} border-2 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
               >
-                <div className="flex items-center mb-4">
+                <div className='flex items-center mb-4'>
                   <div
                     className={`w-12 h-12 ${item.iconColor} bg-white rounded-full flex items-center justify-center mr-4 shadow-md`}
                   >
-                    <item.icon className="w-6 h-6" />
+                    <item.icon className='w-6 h-6' />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-600">
+                    <p className='text-sm font-semibold text-gray-600'>
                       {item.time}
                     </p>
-                    <h4 className="text-xl font-bold text-gray-900">
+                    <h4 className='text-xl font-bold text-gray-900'>
                       {item.title}
                     </h4>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className='text-gray-700 leading-relaxed'>
                   {item.description}
                 </p>
               </div>
@@ -181,33 +181,33 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
         </div>
 
         {/* Practical Information */}
-        <div className="mb-20">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12">
+        <div className='mb-20'>
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12'>
             Good to Know
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className='grid md:grid-cols-2 gap-8'>
             {practicalInfo.map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:shadow-xl transition-shadow"
+                className='bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:shadow-xl transition-shadow'
               >
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <item.icon className="w-6 h-6" />
+                <div className='flex items-start'>
+                  <div className='w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0'>
+                    <item.icon className='w-6 h-6' />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  <div className='flex-1'>
+                    <h4 className='text-xl font-bold text-gray-900 mb-3'>
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className='text-gray-600 leading-relaxed mb-4'>
                       {item.description}
                     </p>
                     {item.action && item.link && (
                       <a
                         href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-blue-600 hover:text-blue-700 font-medium inline-flex items-center'
                       >
                         {item.action} →
                       </a>
@@ -220,46 +220,46 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
         </div>
 
         {/* FAQ Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12">
+        <div className='mb-16'>
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12'>
             Frequently Asked Questions
           </h3>
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className='max-w-4xl mx-auto space-y-6'>
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600"
+                className='bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600'
               >
-                <h4 className="font-bold text-lg text-gray-900 mb-3">
+                <h4 className='font-bold text-lg text-gray-900 mb-3'>
                   {faq.question}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <p className='text-gray-600 leading-relaxed'>{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 lg:p-12 text-center">
-          <h3 className="text-2xl lg:text-3xl font-bold mb-6">
+        <div className='bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 lg:p-12 text-center'>
+          <h3 className='text-2xl lg:text-3xl font-bold mb-6'>
             Still Have Questions?
           </h3>
-          <p className="text-blue-100 mb-8 text-lg max-w-3xl mx-auto">
+          <p className='text-blue-100 mb-8 text-lg max-w-3xl mx-auto'>
             We're here to help! Feel free to reach out before your visit. We'd
             love to answer any questions and help you feel prepared and welcome.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
-              size="lg"
-              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg"
+              size='lg'
+              className='bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg'
               onClick={() => setActiveSection("contact")}
             >
               Contact Us
             </Button>
             <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold"
+              size='lg'
+              variant='outline'
+              className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold'
               onClick={() =>
                 (window.location.href = "mailto:office@newlifebfcde.org")
               }
