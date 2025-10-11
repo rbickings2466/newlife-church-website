@@ -15,20 +15,25 @@ const MinistriesSection = () => {
       color: "bg-pink-50 border-pink-200",
       iconColor: "text-pink-600",
       details: {
-        overview: "Our Children's Ministry provides a safe, nurturing environment where children can learn about God's love and grow in their faith.",
+        overview:
+          "Our Children's Ministry provides a safe, nurturing environment where children can learn about God's love and grow in their faith.",
         programs: [
           {
             name: "Nursery",
-            description: "Infants up to 4 years old. Our nursery provides loving care for your little ones during worship services."
+            description:
+              "Infants up to 4 years old. Our nursery provides loving care for your little ones during worship services.",
           },
           {
             name: "Children's Church",
-            description: "Kindergarten through 6th grade. Children are dismissed midway through the service for age-appropriate teaching, worship, and activities."
-          }
+            description:
+              "Kindergarten through 6th grade. Children are dismissed midway through the service for age-appropriate teaching, worship, and activities.",
+          },
         ],
-        safety: "All teachers are background-checked to ensure the safety and well-being of your children.",
-        contact: "For more information about our Children's Ministry, please contact the church office."
-      }
+        safety:
+          "All teachers are background-checked to ensure the safety and well-being of your children.",
+        contact:
+          "For more information about our Children's Ministry, please contact the church office.",
+      },
     },
     {
       title: "Men's Ministry",
@@ -39,20 +44,25 @@ const MinistriesSection = () => {
       color: "bg-blue-50 border-blue-200",
       iconColor: "text-blue-600",
       details: {
-        overview: "Our Men's Ministry is designed to help men grow as spiritual leaders and disciples of Christ.",
+        overview:
+          "Our Men's Ministry is designed to help men grow as spiritual leaders and disciples of Christ.",
         programs: [
           {
             name: "Men's Bible Study",
-            description: "Meets every second Saturday of the month. Equips men for spiritual leadership through in-depth Bible study and discussion."
+            description:
+              "Meets every second Saturday of the month. Equips men for spiritual leadership through in-depth Bible study and discussion.",
           },
           {
             name: "Quarterly Men's Breakfast",
-            description: "A time for fellowship, worship, teaching, and prayer. Men gather to encourage one another and build strong Christian friendships."
-          }
+            description:
+              "A time for fellowship, worship, teaching, and prayer. Men gather to encourage one another and build strong Christian friendships.",
+          },
         ],
-        purpose: "To challenge and encourage men to fulfill their God-given roles as spiritual leaders in their families and communities.",
-        contact: "Contact an elder or the church office to learn more about getting involved."
-      }
+        purpose:
+          "To challenge and encourage men to fulfill their God-given roles as spiritual leaders in their families and communities.",
+        contact:
+          "Contact an elder or the church office to learn more about getting involved.",
+      },
     },
     {
       title: "Women's Ministry",
@@ -63,36 +73,44 @@ const MinistriesSection = () => {
       color: "bg-amber-50 border-amber-200",
       iconColor: "text-amber-600",
       details: {
-        overview: "Our Women's Ministry provides opportunities for women to grow in their faith, build meaningful relationships, and serve together.",
+        overview:
+          "Our Women's Ministry provides opportunities for women to grow in their faith, build meaningful relationships, and serve together.",
         programs: [
           {
             name: "Women's Bible Study",
-            description: "Every Tuesday from 10 AM to 12 PM. A time for women to study God's Word together, pray, and encourage one another in their walk with Christ."
-          }
+            description:
+              "Every Tuesday from 10 AM to 12 PM. A time for women to study God's Word together, pray, and encourage one another in their walk with Christ.",
+          },
         ],
-        focus: "Deepening relationship with Jesus Christ through biblical study, prayer, and authentic Christian community.",
-        contact: "For more information, please contact the church office or speak with one of our women's ministry leaders."
-      }
+        focus:
+          "Deepening relationship with Jesus Christ through biblical study, prayer, and authentic Christian community.",
+        contact:
+          "For more information, please contact the church office or speak with one of our women's ministry leaders.",
+      },
     },
     {
       title: "Life Groups",
       description:
-        "Small group gatherings for Bible study, fellowship, prayer, and mutual encouragement in a home setting.",
+        "Small group gatherings for a meal, Bible study, fellowship, prayer, and mutual encouragement in a home setting.",
       age: "All Adults",
       icon: Book,
       color: "bg-green-50 border-green-200",
       iconColor: "text-green-600",
       details: {
-        overview: "Life Groups provide an intimate setting for believers to grow together in faith and build deep, meaningful relationships.",
+        overview:
+          "Life Groups provide an intimate setting for believers to grow together in faith and build deep, meaningful relationships.",
         programs: [
           {
             name: "Life Group",
-            description: "Meets on the 2nd and 4th Wednesday evenings from 6-8 PM at a member's home. Includes a meal, Bible study, and prayer time."
-          }
+            description:
+              "Meets on the 2nd and 4th Wednesday evenings from 6-8 PM at a member's home. Includes a meal, Bible study, and prayer time.",
+          },
         ],
-        purpose: "To create a family atmosphere where believers can know and be known, encourage one another, and grow in biblical maturity.",
-        contact: "Contact the church office to find out how you can join or host a Life Group."
-      }
+        purpose:
+          "To create a family atmosphere where believers can know and be known, encourage one another, and grow in biblical maturity.",
+        contact:
+          "Contact the church office to find out how you can join or host a Life Group.",
+      },
     },
     {
       title: "Missions",
@@ -103,12 +121,17 @@ const MinistriesSection = () => {
       color: "bg-purple-50 border-purple-200",
       iconColor: "text-purple-600",
       details: {
-        overview: "Our church is committed to fulfilling the Great Commission by supporting missionaries and mission work both locally and around the world.",
-        focus: "We believe in the evangelistic mission of the church - to preach the gospel to all nations with urgency, compassion, and persuasion.",
-        involvement: "Members can participate through prayer, financial support, short-term mission trips, and local outreach opportunities.",
-        purpose: "To proclaim Christ and make disciples of all nations, demonstrating God's love through both word and deed.",
-        contact: "Speak with an elder or contact the church office to learn about current mission opportunities."
-      }
+        overview:
+          "Our church is committed to fulfilling the Great Commission by supporting missionaries and mission work both locally and around the world.",
+        focus:
+          "We believe in the evangelistic mission of the church - to preach the gospel to all nations with urgency, compassion, and persuasion.",
+        involvement:
+          "Members can participate through prayer, financial support, short-term mission trips, and local outreach opportunities.",
+        purpose:
+          "To proclaim Christ and make disciples of all nations, demonstrating God's love through both word and deed.",
+        contact:
+          "Speak with an elder or contact the church office to learn about current mission opportunities.",
+      },
     },
     {
       title: "Worship Ministry",
@@ -119,12 +142,17 @@ const MinistriesSection = () => {
       color: "bg-indigo-50 border-indigo-200",
       iconColor: "text-indigo-600",
       details: {
-        overview: "Our Worship Ministry leads the congregation in praising God through both traditional hymns and contemporary worship songs.",
-        style: "Traditional worship featuring modern and classic hymns with piano accompaniment, emphasizing congregational singing and biblical preaching.",
-        opportunities: "We welcome vocalists and musicians who desire to use their gifts to glorify God and edify the church.",
-        philosophy: "Worship must be done in spirit and truth, combining both mind and emotion in response to God's character and works.",
-        contact: "If you're interested in serving in our Worship Ministry, please speak with a worship leader or elder."
-      }
+        overview:
+          "Our Worship Ministry leads the congregation in praising God through both traditional hymns and contemporary worship songs.",
+        style:
+          "Traditional worship featuring modern and classic hymns with piano accompaniment, emphasizing congregational singing and biblical preaching.",
+        opportunities:
+          "We welcome vocalists and musicians who desire to use their gifts to glorify God and edify the church.",
+        philosophy:
+          "Worship must be done in spirit and truth, combining both mind and emotion in response to God's character and works.",
+        contact:
+          "If you're interested in serving in our Worship Ministry, please speak with a worship leader or elder.",
+      },
     },
   ];
 
@@ -183,12 +211,15 @@ const MinistriesSection = () => {
           <p className='text-blue-100 mb-8 text-lg max-w-3xl mx-auto'>
             Whether you're new to faith or have been walking with Christ for
             years, there's a place for you to serve and grow in our church
-            family. Contact us to learn more about volunteer and ministry opportunities.
+            family. Contact us to learn more about volunteer and ministry
+            opportunities.
           </p>
           <Button
             size='lg'
             className='bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold shadow-lg'
-            onClick={() => (window.location.href = "mailto:office@newlifebfcde.org")}
+            onClick={() =>
+              (window.location.href = "mailto:office@newlifebfcde.org")
+            }
           >
             Contact Church Office
           </Button>
@@ -206,7 +237,9 @@ const MinistriesSection = () => {
             please contact our church office.
           </p>
           <Button
-            onClick={() => (window.location.href = "mailto:office@newlifebfcde.org")}
+            onClick={() =>
+              (window.location.href = "mailto:office@newlifebfcde.org")
+            }
             className='bg-blue-600 hover:bg-blue-700'
           >
             Contact Church Office
@@ -227,7 +260,12 @@ const MinistriesSection = () => {
               <div className='p-8'>
                 <div className='flex items-center mb-6'>
                   <div
-                    className={`w-16 h-16 ${selectedMinistry.iconColor} bg-white rounded-full flex items-center justify-center mr-4 shadow-md border-2 ${selectedMinistry.color.replace('bg-', 'border-')}`}
+                    className={`w-16 h-16 ${
+                      selectedMinistry.iconColor
+                    } bg-white rounded-full flex items-center justify-center mr-4 shadow-md border-2 ${selectedMinistry.color.replace(
+                      "bg-",
+                      "border-"
+                    )}`}
                   >
                     <selectedMinistry.icon className='w-8 h-8' />
                   </div>
@@ -235,7 +273,9 @@ const MinistriesSection = () => {
                     <h3 className='text-3xl font-bold text-gray-900'>
                       {selectedMinistry.title}
                     </h3>
-                    <p className={`text-sm font-medium ${selectedMinistry.iconColor}`}>
+                    <p
+                      className={`text-sm font-medium ${selectedMinistry.iconColor}`}
+                    >
                       {selectedMinistry.age}
                     </p>
                   </div>
@@ -243,7 +283,9 @@ const MinistriesSection = () => {
 
                 <div className='space-y-6'>
                   <div>
-                    <h4 className='text-xl font-bold text-gray-900 mb-3'>Overview</h4>
+                    <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                      Overview
+                    </h4>
                     <p className='text-gray-700 leading-relaxed'>
                       {selectedMinistry.details.overview}
                     </p>
@@ -251,21 +293,34 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.programs && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Programs</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Programs
+                      </h4>
                       <div className='space-y-4'>
-                        {selectedMinistry.details.programs.map((program, index) => (
-                          <div key={index} className='bg-gray-50 p-4 rounded-lg'>
-                            <h5 className='font-bold text-gray-900 mb-2'>{program.name}</h5>
-                            <p className='text-gray-700 text-sm'>{program.description}</p>
-                          </div>
-                        ))}
+                        {selectedMinistry.details.programs.map(
+                          (program, index) => (
+                            <div
+                              key={index}
+                              className='bg-gray-50 p-4 rounded-lg'
+                            >
+                              <h5 className='font-bold text-gray-900 mb-2'>
+                                {program.name}
+                              </h5>
+                              <p className='text-gray-700 text-sm'>
+                                {program.description}
+                              </p>
+                            </div>
+                          )
+                        )}
                       </div>
                     </div>
                   )}
 
                   {selectedMinistry.details.purpose && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Purpose</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Purpose
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.purpose}
                       </p>
@@ -274,7 +329,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.focus && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Focus</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Focus
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.focus}
                       </p>
@@ -283,7 +340,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.style && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Worship Style</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Worship Style
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.style}
                       </p>
@@ -292,7 +351,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.philosophy && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Philosophy</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Philosophy
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.philosophy}
                       </p>
@@ -301,7 +362,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.involvement && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Get Involved</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Get Involved
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.involvement}
                       </p>
@@ -310,7 +373,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.opportunities && (
                     <div>
-                      <h4 className='text-xl font-bold text-gray-900 mb-3'>Opportunities</h4>
+                      <h4 className='text-xl font-bold text-gray-900 mb-3'>
+                        Opportunities
+                      </h4>
                       <p className='text-gray-700 leading-relaxed'>
                         {selectedMinistry.details.opportunities}
                       </p>
@@ -319,7 +384,9 @@ const MinistriesSection = () => {
 
                   {selectedMinistry.details.safety && (
                     <div className='bg-blue-50 border-2 border-blue-200 p-4 rounded-lg'>
-                      <h4 className='text-lg font-bold text-gray-900 mb-2'>Safety & Security</h4>
+                      <h4 className='text-lg font-bold text-gray-900 mb-2'>
+                        Safety & Security
+                      </h4>
                       <p className='text-gray-700 text-sm'>
                         {selectedMinistry.details.safety}
                       </p>
@@ -327,7 +394,9 @@ const MinistriesSection = () => {
                   )}
 
                   <div className='bg-gray-100 p-4 rounded-lg'>
-                    <h4 className='text-lg font-bold text-gray-900 mb-2'>Contact</h4>
+                    <h4 className='text-lg font-bold text-gray-900 mb-2'>
+                      Contact
+                    </h4>
                     <p className='text-gray-700 text-sm'>
                       {selectedMinistry.details.contact}
                     </p>
