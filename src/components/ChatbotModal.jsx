@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, Loader2 } from 'lucide-react';
+import { X, Send, Loader2, AlertCircle } from 'lucide-react';
 import { sendMessageToGemini } from '../utils/geminiApi';
+import { rateLimiter } from '../utils/rateLimiter';
 
 export default function ChatbotModal({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
@@ -11,6 +12,7 @@ export default function ChatbotModal({ isOpen, onClose }) {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [rateLimitError, setRateLimitError] = useState(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -32,8 +34,16 @@ export default function ChatbotModal({ isOpen, onClose }) {
     e.preventDefault();
     if (!inputMessage.trim() || isLoading) return;
 
+    // Check rate limit
+    if (!rateLimiter.canSendMessage()) {
+      const minutesRemaining = rateLimiter.getTimeUntilReset();
+      setRateLimitError(`You've reached the message limit. Please try again in ${minutesRemaining} minute${minutesRemaining !== 1 ? 's' : ''}.`);
+      return;
+    }
+
     const userMessage = inputMessage.trim();
     setInputMessage('');
+    setRateLimitError(null);
 
     // Add user message to chat
     const newMessages = [...messages, { role: 'user', text: userMessage }];
@@ -41,8 +51,11 @@ export default function ChatbotModal({ isOpen, onClose }) {
     setIsLoading(true);
 
     try {
-      // Get conversation history (last 5 exchanges)
-      const conversationHistory = newMessages.slice(-10);
+      // Record message for rate limiting
+      rateLimiter.recordMessage();
+
+      // Get conversation history (reduced from 10 to 4 messages to save tokens)
+      const conversationHistory = newMessages.slice(-4);
 
       // Send to Gemini API
       const reply = await sendMessageToGemini(userMessage, conversationHistory);
@@ -112,6 +125,12 @@ export default function ChatbotModal({ isOpen, onClose }) {
 
         {/* Input */}
         <div className="border-t p-4">
+          {rateLimitError && (
+            <div className="mb-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg flex items-start gap-2">
+              <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-yellow-800">{rateLimitError}</p>
+            </div>
+          )}
           <form onSubmit={handleSendMessage} className="flex gap-2">
             <input
               ref={inputRef}
@@ -130,6 +149,9 @@ export default function ChatbotModal({ isOpen, onClose }) {
               <Send className="w-5 h-5" />
             </button>
           </form>
+          <p className="text-xs text-gray-500 mt-2 text-center">
+            {rateLimiter.getRemainingMessages()} questions remaining this hour
+          </p>
         </div>
       </div>
     </div>

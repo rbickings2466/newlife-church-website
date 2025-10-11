@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test RAG System (No API Calls)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2563eb; }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+        }
+        .query {
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        .result {
+            padding: 10px;
+            background: #e5e7eb;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+        }
+        .stats {
+            color: #059669;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 RAG System Test (No API Required)</h1>
+        <p>This tests the RAG system locally without making any Gemini API calls.</p>
+
+        <button onclick="runTests()">Run RAG Tests</button>
+
+        <div id="results"></div>
+    </div>
+
+    <script type="module">
+        import { getRelevantKnowledge } from './src/utils/ragSystem.js';
+
+        window.runTests = function() {
+            const queries = [
+                'What time is Sunday service?',
+                'How can I get saved?',
+                'Tell me about the church history',
+                'What are the roles of men and women?',
+                'Who is the pastor?',
+                'Does the church have a youth ministry?'
+            ];
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            queries.forEach(query => {
+                const context = getRelevantKnowledge(query);
+                const tokenEstimate = Math.ceil(context.length / 4);
+                const fullKBTokens = 19006;
+                const savings = Math.round((1 - tokenEstimate / fullKBTokens) * 100);
+
+                const section = document.createElement('div');
+                section.className = 'test-section';
+                section.innerHTML = `
+                    <div class="query">Query: "${query}"</div>
+                    <div class="stats">
+                        ✅ Retrieved ${tokenEstimate} tokens (vs 19,006 for full KB)
+                        <br>💰 Savings: ${savings}%
+                    </div>
+                    <div class="result">${context.substring(0, 300)}...</div>
+                `;
+                resultsDiv.appendChild(section);
+            });
+        };
+    </script>
+</body>
+</html>
