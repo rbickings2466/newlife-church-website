@@ -15,28 +15,35 @@ class KnowledgeBaseRAG {
 
     let currentChunk = null;
     let currentContent = [];
+    let inDocument = false;
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
-      // Detect document boundaries
+      // Detect document boundaries (format: === TITLE ===)
       if (line.includes('========================================')) {
-        // Save previous chunk if exists
-        if (currentChunk && currentContent.length > 0) {
-          chunks.push({
-            title: currentChunk,
-            content: currentContent.join('\n').trim(),
-            keywords: this.extractKeywords(currentChunk, currentContent.join('\n'))
-          });
-        }
+        // Check if next line is a title (not empty and not another separator)
+        if (i + 1 < lines.length && lines[i + 1].trim() && !lines[i + 1].includes('===')) {
+          // Save previous chunk if exists
+          if (currentChunk && currentContent.length > 0) {
+            chunks.push({
+              title: currentChunk,
+              content: currentContent.join('\n').trim(),
+              keywords: this.extractKeywords(currentChunk, currentContent.join('\n'))
+            });
+          }
 
-        // Start new chunk - next line contains the title
-        if (i + 1 < lines.length) {
+          // Start new chunk - next line is the title
           currentChunk = lines[i + 1].trim();
-          currentContent = [lines[i], lines[i + 1]]; // Include separator and title
-          i++; // Skip the title line
+          currentContent = [];
+          inDocument = true;
+          i += 2; // Skip title line and closing separator
+          continue;
         }
-      } else if (currentChunk) {
+      }
+
+      // Add content lines to current chunk
+      if (inDocument && currentChunk) {
         currentContent.push(line);
       }
     }
@@ -154,7 +161,11 @@ DENOMINATION: Bible Fellowship Church (similar to reformed Baptist)
       'believe': ['belief', 'doctrine', 'faith', 'articles'],
       'pastor': ['pastor', 'elder', 'leader', 'minister'],
       'women': ['women', 'gender', 'role', 'complementarian'],
-      'history': ['history', 'origin', 'founded', 'background']
+      'history': ['history', 'origin', 'founded', 'background'],
+      'kids': ['children', 'kids', 'child', 'nursery'],
+      'children': ['children', 'kids', 'child', 'nursery'],
+      'child': ['children', 'kids', 'child', 'nursery'],
+      'youth': ['youth', 'teen', 'teenager', 'young']
     };
 
     for (const word of queryWords) {
