@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Book, Cross, Heart, Users, Sparkles, Church } from "lucide-react";
 import BFCArticlesModal from "./BFCArticlesModal";
+import LondonBaptistModal from "./LondonBaptistModal";
+import HeidelbergModal from "./HeidelbergModal";
 
 const StatementOfFaithSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBFCModalOpen, setIsBFCModalOpen] = useState(false);
+  const [isLondonModalOpen, setIsLondonModalOpen] = useState(false);
+  const [isHeidelbergModalOpen, setIsHeidelbergModalOpen] = useState(false);
   const beliefs = [
     {
       title: "The Scriptures",
@@ -178,7 +182,7 @@ const StatementOfFaithSection = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsBFCModalOpen(true)}
               className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg hover:bg-yellow-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               <h4 className="font-bold text-xl mb-2 text-gray-900">
@@ -191,20 +195,32 @@ const StatementOfFaithSection = () => {
                 Click to view all articles →
               </p>
             </button>
-            <div className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg">
+            <button
+              onClick={() => setIsLondonModalOpen(true)}
+              className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg hover:bg-yellow-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+            >
               <h4 className="font-bold text-xl mb-2 text-gray-900">
                 The London Baptist Confession (1689)
               </h4>
               <p className="text-gray-800 text-sm">
                 Reformed Baptist distinctive on church polity and ordinances
               </p>
-            </div>
-            <div className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg">
+              <p className="text-amber-900 text-xs mt-2 font-semibold">
+                Click to view confession →
+              </p>
+            </button>
+            <button
+              onClick={() => setIsHeidelbergModalOpen(true)}
+              className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg hover:bg-yellow-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+            >
               <h4 className="font-bold text-xl mb-2 text-gray-900">The Heidelberg Catechism</h4>
               <p className="text-gray-800 text-sm">
                 A pastoral guide to Christian doctrine and life
               </p>
-            </div>
+              <p className="text-purple-900 text-xs mt-2 font-semibold">
+                Click to view catechism →
+              </p>
+            </button>
           </div>
         </div>
 
@@ -254,8 +270,10 @@ const StatementOfFaithSection = () => {
         </div>
       </div>
 
-      {/* BFC Articles of Faith Modal */}
-      <BFCArticlesModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      {/* Modals */}
+      <BFCArticlesModal isOpen={isBFCModalOpen} onClose={() => setIsBFCModalOpen(false)} />
+      <LondonBaptistModal isOpen={isLondonModalOpen} onClose={() => setIsLondonModalOpen(false)} />
+      <HeidelbergModal isOpen={isHeidelbergModalOpen} onClose={() => setIsHeidelbergModalOpen(false)} />
     </section>
   );
 };
