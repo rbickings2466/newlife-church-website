@@ -1,8 +1,18 @@
 import React from "react";
-import { X, ExternalLink, Download } from "lucide-react";
+import { X, Download, BookOpen, ExternalLink } from "lucide-react";
 
 const HeidelbergModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+
+  const handleDownloadPDF = () => {
+    window.open("https://www.heidelberg-catechism.com/pdf/lords-days/Heidelberg-Catechism.pdf", "_blank", "noopener,noreferrer");
+    onClose();
+  };
+
+  const handleOpenWebsite = () => {
+    window.open("https://www.heidelberg-catechism.com", "_blank", "noopener,noreferrer");
+    onClose();
+  };
 
   return (
     <div
@@ -10,11 +20,11 @@ const HeidelbergModal = ({ isOpen, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl max-w-6xl w-full h-[90vh] overflow-hidden animate-scale-up flex flex-col"
+        className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden animate-scale-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6 flex-shrink-0">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -34,51 +44,63 @@ const HeidelbergModal = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Content - Embedded PDF */}
-        <div className="flex-grow overflow-hidden bg-gray-50 relative">
-          <iframe
-            src="https://www.heidelberg-catechism.com/pdf/lords-days/Heidelberg-Catechism.pdf"
-            className="w-full h-full border-0"
-            title="The Heidelberg Catechism PDF"
-            type="application/pdf"
-          />
-
-          {/* Loading overlay */}
-          <div className="absolute inset-0 bg-white flex items-center justify-center pointer-events-none animate-fade-out">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-              <p className="text-gray-600">Loading catechism...</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="bg-purple-50 border-t-2 border-purple-200 p-4 flex-shrink-0">
-          <div className="flex items-center justify-between flex-wrap gap-2">
-            <p className="text-sm text-gray-700">
-              A pastoral guide to Christian doctrine and life (52 Lord's Days)
+        {/* Content */}
+        <div className="p-8 md:p-12">
+          <div className="text-center mb-8">
+            <BookOpen className="w-20 h-20 text-purple-600 mx-auto mb-6" />
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              View the Complete Catechism
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The Heidelberg Catechism (1563) is one of the most influential Reformed catechisms,
+              organized into 52 Lord's Days for study throughout the year. It beautifully
+              presents Christian doctrine through the themes of guilt, grace, and gratitude.
             </p>
-            <div className="flex gap-3">
-              <a
-                href="https://www.heidelberg-catechism.com/pdf/lords-days/Heidelberg-Catechism.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-semibold text-sm transition-colors"
-              >
-                <Download className="w-4 h-4" />
-                Download PDF
-              </a>
-              <a
-                href="https://www.heidelberg-catechism.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-semibold text-sm transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                Open website
-              </a>
+            <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-6">
+              <h4 className="font-bold text-gray-900 mb-3">Structure:</h4>
+              <ul className="text-left text-gray-700 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 font-bold">•</span>
+                  <span>52 Lord's Days (129 questions and answers)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 font-bold">•</span>
+                  <span>Part 1: Guilt - Human misery and sin</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 font-bold">•</span>
+                  <span>Part 2: Grace - Redemption through Christ</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 font-bold">•</span>
+                  <span>Part 3: Gratitude - Living in thankfulness</span>
+                </li>
+              </ul>
             </div>
           </div>
+
+          {/* Action Buttons */}
+          <div className="space-y-3">
+            <button
+              onClick={handleDownloadPDF}
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download PDF (52 Lord's Days)</span>
+            </button>
+
+            <button
+              onClick={handleOpenWebsite}
+              className="w-full bg-white border-2 border-purple-600 text-purple-700 hover:bg-purple-50 font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+            >
+              <ExternalLink className="w-5 h-5" />
+              <span>Browse Online at heidelberg-catechism.com</span>
+            </button>
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-4">
+            Opens in a new tab for the best reading experience
+          </p>
         </div>
       </div>
     </div>
