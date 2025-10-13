@@ -23,7 +23,7 @@ const MembershipSection = ({ setActiveSection }) => {
       icon: Book,
       title: "2. Learn Our Beliefs",
       description:
-        "Attend four two-hour membership classes where are church polity, leadership, and doctrine are discussed",
+        "Attend four two-hour membership classes where our church polity, leadership, and doctrine are discussed",
     },
     {
       icon: Users,
