@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Read(//Users/rbickings/Desktop/**)"
+      "Bash(node -e \"import(''./src/utils/ragSystem.js'').then(m => { const result = m.getRelevantKnowledge(''What time is Sunday service?''); console.log(''RAG works! Got'', result.length, ''chars''); }).catch(e => console.error(''RAG Error:'', e.message, ''\\nStack:'', e.stack))\")",
+      "Bash(npm run build)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nImplement RAG system and cost reduction measures for chatbot\n\nThis update dramatically reduces Gemini API costs by 95-99% through multiple optimizations:\n\n### RAG (Retrieval Augmented Generation) - 99% token reduction\n- New ragSystem.js intelligently retrieves only relevant knowledge base sections\n- Reduces knowledge base tokens from 19,000 to 150-500 per request\n- Uses keyword extraction and semantic search to find relevant chunks\n- Parses KB into 11 searchable document chunks\n\n### Rate Limiting - Prevents abuse\n- New rateLimiter.js limits users to 10 messages per hour\n- Stores limits in localStorage with automatic reset\n- Shows friendly warnings with countdown timer\n\n### Conversation History Reduction - 60% reduction\n- Reduced from 10 to 4 previous messages in context\n- Saves ~9,600 tokens per conversation\n\n### Usage Analytics\n- Tracks daily query counts and token usage\n- Stores 30 days of history in localStorage\n- Logs to console for monitoring\n\n### Results\n- Before: ~31,000 tokens per message\n- After: ~2,600-2,900 tokens per message\n- Total savings: 91-94% per message, 95-99% expected monthly costs\n\nFiles added:\n- src/utils/ragSystem.js - RAG implementation\n- src/utils/rateLimiter.js - Rate limiting\n- test-rag.js - Test script for RAG\n- test-chatbot-mock.html - Browser-based test\n- COST_REDUCTION_CHANGES.md - Complete documentation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nReplace API-based chatbot with free Gemini Gem link\n\nRemoved the expensive Gemini API chatbot implementation and replaced it with a simple link to the free Gemini Gem \"Ask New Life\".\n\n### Changes:\n- Removed all API-based chatbot files (geminiApi.js, ragSystem.js, rateLimiter.js, ChatbotModal.jsx)\n- Updated AskNewLifeButton to open Gemini Gem in new tab instead of modal\n- Removed VITE_GEMINI_API_KEY from environment variables\n- Deleted test files and documentation for API implementation\n- Reduced bundle size by ~88KB\n\n### Benefits:\n- Zero API costs - Gemini Gems are free to use\n- No quota limits or billing concerns\n- Simpler codebase with less complexity\n- Users get the same AI assistant experience via Google''s hosted Gem\n\nGem URL: https://gemini.google.com/gem/13Whz0Mp4C6Ai5pOsGx7wxFl_PwjFcrS-\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(curl -s \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyDAHxJHGA-HIYv6rSQInTOIPJ7on3b4BrU\" -H 'Content-Type: application/json' -d '{\"\"\"\"contents\"\"\"\":[{\"\"\"\"parts\"\"\"\":[{\"\"\"\"text\"\"\"\":\"\"\"\"Test\"\"\"\"}]}]}')",
+      "Bash(curl -s 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyDAHxJHGA-HIYv6rSQInTOIPJ7on3b4BrU' -H 'Content-Type: application/json' -d '{\"\"\"\"contents\"\"\"\":[{\"\"\"\"parts\"\"\"\":[{\"\"\"\"text\"\"\"\":\"\"\"\"Test\"\"\"\"}]}]}')",
+      "Bash(git commit:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []
