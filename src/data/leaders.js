@@ -7,6 +7,7 @@ import tomLioyImg from "../assets/t_lioy.jpg";
 import georgeKingImg from "../assets/g_king.jpg";
 import rogerBishopImg from "../assets/r_bishop.jpg";
 import steveHillriegelImg from "../assets/s_hillriegel.jpg";
+import allenLavoieImg from "../assets/Allen Lavoie.jpg";
 
 export const leaders = [
   {
@@ -49,7 +50,7 @@ export const leaders = [
     id: "deacon-1",
     name: "George King",
     roleType: "deacon",
-    title: "Deacon",
+    title: "Deacon (Emmeritus)",
     bio: "George and his wife Marry Ann (Nan) have been part of New Life's ministry from its inception back in 2004. They have been and continue to be faithful servants of Jesus in the church's life.",
     photo: georgeKingImg,
     order: 1,
@@ -76,7 +77,19 @@ export const leaders = [
     photo: steveHillriegelImg,
     order: 3,
     links: {
-      email: "%20sjh1953@hotmail.com",
+      email: "sjh1953@hotmail.com",
+    },
+  },
+  {
+    id: "deacon-4",
+    name: "Allen Lavoie",
+    roleType: "deacon",
+    title: "Deacon",
+    bio: "Allen Lavoie was born in Germany and raised Catholic, moving frequently due to his father's Air Force career. After a 26-year management career at Supermarkets General, he transitioned to operations manager for a commercial cleaning business. He met his wife, Shelley, through volleyball, and her family's Christian faith led him to become a believer at Faith Church. After retiring to Millsboro, he and his wife found New Life Bible Fellowship, where he felt called to serve as a deacon.",
+    photo: allenLavoieImg,
+    order: 4,
+    links: {
+      email: "alavoie7171@icloud.com",
     },
   },
 ];
