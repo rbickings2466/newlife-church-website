@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Book, Cross, Heart, Users, Sparkles, Church } from "lucide-react";
+import BFCArticlesModal from "./BFCArticlesModal";
 
 const StatementOfFaithSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const beliefs = [
     {
       title: "The Scriptures",
@@ -175,14 +177,20 @@ const StatementOfFaithSection = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg hover:bg-yellow-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+            >
               <h4 className="font-bold text-xl mb-2 text-gray-900">
-                The Westminster Confession
+                Bible Fellowship Church Articles of Faith
               </h4>
               <p className="text-gray-800 text-sm">
-                A comprehensive statement of Reformed doctrine
+                Our comprehensive statement of faith and doctrine (28 Articles)
               </p>
-            </div>
+              <p className="text-blue-900 text-xs mt-2 font-semibold">
+                Click to view all articles →
+              </p>
+            </button>
             <div className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg">
               <h4 className="font-bold text-xl mb-2 text-gray-900">
                 The London Baptist Confession (1689)
@@ -245,6 +253,9 @@ const StatementOfFaithSection = () => {
           </div>
         </div>
       </div>
+
+      {/* BFC Articles of Faith Modal */}
+      <BFCArticlesModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
