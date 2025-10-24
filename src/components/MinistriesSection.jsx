@@ -31,6 +31,32 @@ const MinistriesSection = () => {
         ],
         safety:
           "All teachers are background-checked to ensure the safety and well-being of your children.",
+        childAbusePolicy: {
+          title: "Child Abuse and Neglect Policy",
+          effectiveDate: "August 2025",
+          sections: [
+            {
+              heading: "Policy Statement",
+              content:
+                "New Life Bible Fellowship Church is committed to protecting all children from harm. All church employees, volunteers, and contractors are mandated reporters under Delaware law and must report any reasonable suspicion of child abuse or neglect. Failure to report may result in disciplinary action and legal penalties.",
+            },
+            {
+              heading: "Reporting Procedures",
+              content:
+                "Any employee, volunteer, or contractor who has reasonable suspicion that a child is being abused or neglected must immediately report their concerns. Reports should be made to a church leader (e.g., pastor, elder, or children's ministry director), who will then report to the appropriate state agency. Individuals can also make direct reports to the Delaware Division of Family Services (DFS) at 1-800-292-9582.",
+            },
+            {
+              heading: "Church Responsibilities",
+              content:
+                "The church provides annual training to all employees and volunteers on how to identify and report suspected child abuse and neglect. We cooperate fully with DFS and law enforcement agencies during any investigation and will not take retaliatory action against anyone who, in good faith, reports suspected abuse.",
+            },
+            {
+              heading: "Background Checks & Code of Conduct",
+              content:
+                "All employees, volunteers, and contractors who work with children are subject to criminal background checks as a condition of employment or service. Any individual who is a subject of an investigation for child abuse or neglect will be placed on administrative leave pending the outcome. Anyone found to have committed child abuse or neglect will be subject to disciplinary action, up to and including termination, and may face legal prosecution.",
+            },
+          ],
+        },
         contact:
           "For more information about our Children's Ministry, please contact the church office.",
       },
@@ -390,6 +416,31 @@ const MinistriesSection = () => {
                       <p className='text-gray-700 text-sm'>
                         {selectedMinistry.details.safety}
                       </p>
+                    </div>
+                  )}
+
+                  {selectedMinistry.details.childAbusePolicy && (
+                    <div className='bg-pink-50 border-2 border-pink-200 p-6 rounded-lg'>
+                      <h4 className='text-xl font-bold text-gray-900 mb-2'>
+                        {selectedMinistry.details.childAbusePolicy.title}
+                      </h4>
+                      <p className='text-sm text-gray-600 mb-4'>
+                        Effective Date: {selectedMinistry.details.childAbusePolicy.effectiveDate}
+                      </p>
+                      <div className='space-y-4'>
+                        {selectedMinistry.details.childAbusePolicy.sections.map(
+                          (section, index) => (
+                            <div key={index}>
+                              <h5 className='font-bold text-gray-900 mb-2'>
+                                {section.heading}
+                              </h5>
+                              <p className='text-gray-700 text-sm leading-relaxed'>
+                                {section.content}
+                              </p>
+                            </div>
+                          )
+                        )}
+                      </div>
                     </div>
                   )}
 
