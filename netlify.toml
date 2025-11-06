@@ -9,3 +9,6 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # Disable secrets scanning for public API keys (Firebase, YouTube, EmailJS)
+  # These are intentionally public and designed to be exposed in client-side code
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
