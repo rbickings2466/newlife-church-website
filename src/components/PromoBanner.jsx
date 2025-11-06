@@ -12,6 +12,29 @@ const PromoBanner = () => {
   const { promoBanner, loading, error } = usePromoBanner();
   const [isVisible, setIsVisible] = React.useState(true);
 
+  // Extract YouTube video ID from various URL formats
+  const getYouTubeEmbedUrl = (url) => {
+    if (!url || typeof url !== 'string') return '';
+
+    let videoId = '';
+
+    try {
+      // Handle different YouTube URL formats
+      if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1].split('?')[0];
+      } else if (url.includes('youtube.com/watch')) {
+        videoId = url.split('v=')[1]?.split('&')[0];
+      } else if (url.includes('youtube.com/embed/')) {
+        videoId = url.split('embed/')[1].split('?')[0];
+      }
+    } catch (err) {
+      console.error('Error parsing YouTube URL:', err);
+      return '';
+    }
+
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+  };
+
   // Don't render if loading, error, no banner, or user dismissed
   if (loading || error || !promoBanner || !isVisible) {
     return null;
@@ -19,21 +42,17 @@ const PromoBanner = () => {
 
   const config = promoBanner;
 
-  // Extract YouTube video ID from various URL formats
-  const getYouTubeEmbedUrl = (url) => {
-    let videoId = '';
+  // Validate required fields
+  if (!config.videoUrl) {
+    console.error('Promo banner missing videoUrl');
+    return null;
+  }
 
-    // Handle different YouTube URL formats
-    if (url.includes('youtu.be/')) {
-      videoId = url.split('youtu.be/')[1].split('?')[0];
-    } else if (url.includes('youtube.com/watch')) {
-      videoId = url.split('v=')[1]?.split('&')[0];
-    } else if (url.includes('youtube.com/embed/')) {
-      videoId = url.split('embed/')[1].split('?')[0];
-    }
-
-    return `https://www.youtube.com/embed/${videoId}`;
-  };
+  const embedUrl = getYouTubeEmbedUrl(config.videoUrl);
+  if (!embedUrl) {
+    console.error('Invalid YouTube URL:', config.videoUrl);
+    return null;
+  }
 
   const handleClose = () => {
     setIsVisible(false);
@@ -86,7 +105,7 @@ const PromoBanner = () => {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src={getYouTubeEmbedUrl(config.videoUrl)}
+                src={embedUrl}
                 className="absolute top-0 left-0 w-full h-full"
                 title={config.title || "Promotional Video"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
