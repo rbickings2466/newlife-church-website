@@ -10,7 +10,12 @@ import usePromoBanner from "../hooks/usePromoBanner";
  */
 const PromoBanner = () => {
   const { promoBanner, loading, error } = usePromoBanner();
-  const [isVisible, setIsVisible] = React.useState(true);
+
+  // Initialize visibility state - check localStorage on mount to avoid hydration mismatch
+  const [isVisible, setIsVisible] = React.useState(() => {
+    if (typeof window === 'undefined') return true;
+    return true; // Default to visible, will check dismissal in useEffect
+  });
 
   // Extract video embed URL from various platforms (YouTube, Google Drive/Vids)
   const getVideoEmbedUrl = (url) => {
@@ -107,16 +112,16 @@ const PromoBanner = () => {
   return (
     <section className={`relative py-12 ${config.backgroundColor || 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Close button */}
-        {config.dismissible !== false && (
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200"
-            aria-label="Close banner"
-          >
-            <X className="w-5 h-5 text-gray-600" />
-          </button>
-        )}
+        {/* Close button - always render but hide if not dismissible */}
+        <button
+          onClick={handleClose}
+          className={`absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200 ${
+            config.dismissible === false ? 'hidden' : ''
+          }`}
+          aria-label="Close banner"
+        >
+          <X className="w-5 h-5 text-gray-600" />
+        </button>
 
         <div className="max-w-6xl mx-auto">
           {/* Title */}
