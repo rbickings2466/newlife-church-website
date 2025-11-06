@@ -17,28 +17,38 @@ export const usePromoBanner = () => {
         setLoading(true);
         setError(null);
 
-        // Query for active promo banners, ordered by creation date (most recent first)
+        // Query for active promo banners
+        // We'll get all enabled banners and sort client-side to avoid needing a composite index
         const promosRef = collection(db, 'promoBanners');
         const q = query(
           promosRef,
-          where('enabled', '==', true),
-          orderBy('createdAt', 'desc'),
-          limit(1)
+          where('enabled', '==', true)
         );
 
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
-          const doc = querySnapshot.docs[0];
-          setPromoBanner({
-            id: doc.id,
-            ...doc.data()
-          });
+          // Sort by createdAt on the client side and get the most recent
+          const promos = querySnapshot.docs
+            .map(doc => ({
+              id: doc.id,
+              ...doc.data()
+            }))
+            .sort((a, b) => {
+              const aTime = a.createdAt?.seconds || 0;
+              const bTime = b.createdAt?.seconds || 0;
+              return bTime - aTime; // Most recent first
+            });
+
+          setPromoBanner(promos[0]);
+          console.log('Promo banner loaded:', promos[0]);
         } else {
+          console.log('No enabled promo banners found');
           setPromoBanner(null);
         }
       } catch (err) {
         console.error('Error fetching promo banner:', err);
+        console.error('Error details:', err.code, err.message);
         setError(err.message);
         setPromoBanner(null);
       } finally {
