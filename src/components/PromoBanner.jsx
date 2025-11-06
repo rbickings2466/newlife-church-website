@@ -6,20 +6,48 @@ import usePromoBanner from "../hooks/usePromoBanner";
  * PromoBanner - Displays promotional videos for events, sermon series, etc.
  *
  * Now powered by Firebase - manage videos through the admin panel!
- * Supports YouTube videos with optional title, description, and call-to-action.
+ * Supports YouTube and Google Drive/Vids videos with optional title, description, and call-to-action.
  */
 const PromoBanner = () => {
   const { promoBanner, loading, error } = usePromoBanner();
   const [isVisible, setIsVisible] = React.useState(true);
 
-  // Extract YouTube video ID from various URL formats
-  const getYouTubeEmbedUrl = (url) => {
+  // Extract video embed URL from various platforms (YouTube, Google Drive/Vids)
+  const getVideoEmbedUrl = (url) => {
     if (!url || typeof url !== 'string') return '';
 
-    let videoId = '';
-
     try {
-      // Handle different YouTube URL formats
+      // Google Drive/Docs/Vids URLs
+      if (url.includes('docs.google.com') || url.includes('drive.google.com')) {
+        // Extract the file ID from various Google formats
+        let fileId = '';
+
+        // Format: https://docs.google.com/videos/d/{ID}/edit
+        if (url.includes('/videos/d/')) {
+          fileId = url.split('/videos/d/')[1].split('/')[0];
+        }
+        // Format: https://drive.google.com/file/d/{ID}/view
+        else if (url.includes('/file/d/')) {
+          fileId = url.split('/file/d/')[1].split('/')[0];
+        }
+        // Format: https://docs.google.com/document/d/{ID}/
+        else if (url.includes('/document/d/')) {
+          fileId = url.split('/document/d/')[1].split('/')[0];
+        }
+        // Format: https://drive.google.com/open?id={ID}
+        else if (url.includes('id=')) {
+          fileId = url.split('id=')[1].split('&')[0];
+        }
+
+        if (fileId) {
+          // Remove any query parameters
+          fileId = fileId.split('?')[0];
+          return `https://drive.google.com/file/d/${fileId}/preview`;
+        }
+      }
+
+      // YouTube URLs
+      let videoId = '';
       if (url.includes('youtu.be/')) {
         videoId = url.split('youtu.be/')[1].split('?')[0];
       } else if (url.includes('youtube.com/watch')) {
@@ -27,12 +55,16 @@ const PromoBanner = () => {
       } else if (url.includes('youtube.com/embed/')) {
         videoId = url.split('embed/')[1].split('?')[0];
       }
+
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
     } catch (err) {
-      console.error('Error parsing YouTube URL:', err);
+      console.error('Error parsing video URL:', err);
       return '';
     }
 
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    return '';
   };
 
   // Don't render if loading, error, no banner, or user dismissed
@@ -48,9 +80,9 @@ const PromoBanner = () => {
     return null;
   }
 
-  const embedUrl = getYouTubeEmbedUrl(config.videoUrl);
+  const embedUrl = getVideoEmbedUrl(config.videoUrl);
   if (!embedUrl) {
-    console.error('Invalid YouTube URL:', config.videoUrl);
+    console.error('Invalid video URL (must be YouTube or Google Drive/Vids):', config.videoUrl);
     return null;
   }
 

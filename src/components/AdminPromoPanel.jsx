@@ -204,7 +204,7 @@ const AdminPromoPanel = () => {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
-              <p className="mt-1 text-xs text-gray-500">YouTube URL in any format</p>
+              <p className="mt-1 text-xs text-gray-500">YouTube or Google Drive/Vids URL in any format</p>
             </div>
 
             <div>
