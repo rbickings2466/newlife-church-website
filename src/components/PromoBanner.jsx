@@ -101,22 +101,27 @@ const PromoBanner = () => {
 
   // Check if user previously dismissed this promo
   React.useEffect(() => {
-    if (config.rememberDismissal && config.id) {
-      const wasDismissed = localStorage.getItem(`promo_dismissed_${config.id}`);
+    if (!promoBanner) return;
+
+    if (promoBanner.rememberDismissal && promoBanner.id) {
+      const wasDismissed = localStorage.getItem(`promo_dismissed_${promoBanner.id}`);
       if (wasDismissed === 'true') {
         setIsVisible(false);
       }
     }
-  }, [config.id, config.rememberDismissal]);
+  }, [promoBanner]);
+
+  const backgroundColor = config?.backgroundColor || 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50';
+  const isDismissible = config?.dismissible !== false;
 
   return (
-    <section className={`relative py-12 ${config.backgroundColor || 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
+    <section className={`relative py-12 ${backgroundColor}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Close button - always render but hide if not dismissible */}
         <button
           onClick={handleClose}
           className={`absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200 ${
-            config.dismissible === false ? 'hidden' : ''
+            !isDismissible ? 'hidden' : ''
           }`}
           aria-label="Close banner"
         >
