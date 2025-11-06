@@ -17,6 +17,18 @@ const PromoBanner = () => {
     return true; // Default to visible, will check dismissal in useEffect
   });
 
+  // Check if user previously dismissed this promo - MUST be before any conditional returns
+  React.useEffect(() => {
+    if (!promoBanner) return;
+
+    if (promoBanner.rememberDismissal && promoBanner.id) {
+      const wasDismissed = localStorage.getItem(`promo_dismissed_${promoBanner.id}`);
+      if (wasDismissed === 'true') {
+        setIsVisible(false);
+      }
+    }
+  }, [promoBanner]);
+
   // Extract video embed URL from various platforms (YouTube, Google Drive/Vids)
   const getVideoEmbedUrl = (url) => {
     if (!url || typeof url !== 'string') return '';
@@ -98,18 +110,6 @@ const PromoBanner = () => {
       localStorage.setItem(`promo_dismissed_${config.id}`, 'true');
     }
   };
-
-  // Check if user previously dismissed this promo
-  React.useEffect(() => {
-    if (!promoBanner) return;
-
-    if (promoBanner.rememberDismissal && promoBanner.id) {
-      const wasDismissed = localStorage.getItem(`promo_dismissed_${promoBanner.id}`);
-      if (wasDismissed === 'true') {
-        setIsVisible(false);
-      }
-    }
-  }, [promoBanner]);
 
   const backgroundColor = config?.backgroundColor || 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50';
   const isDismissible = config?.dismissible !== false;
