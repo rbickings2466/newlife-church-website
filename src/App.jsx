@@ -14,6 +14,7 @@ import GivingSection from "./components/GivingSection";
 import PastorSection from "./components/PastorSection";
 import MembershipSection from "./components/MembershipSection";
 import SmallGroupsSection from "./components/SmallGroupsSection";
+import FaithlifeSection from "./components/FaithlifeSection";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import AskNewLifeButton from "./components/AskNewLifeButton";
@@ -43,6 +44,7 @@ function AppInner() {
         return (
           <>
             <HeroSection setActiveSection={setActiveSection} />
+            <FaithlifeSection />
             <EventsSection preview={true} />
             <SermonsSection preview={true} />
             <PlanYourVisitSection compact={true} setActiveSection={setActiveSection} />
