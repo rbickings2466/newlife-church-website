@@ -69,5 +69,16 @@ service cloud.firestore {
         )
       );
     }
+
+    // Promo banners collection
+    match /promoBanners/{bannerId} {
+      // Anyone can read promo banners (public)
+      allow read: if true;
+
+      // Only admins can create, update, or delete promo banners
+      allow create, update, delete: if request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
   }
 }

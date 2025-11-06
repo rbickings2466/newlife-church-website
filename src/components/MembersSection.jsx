@@ -20,6 +20,7 @@ import {
   where,
 } from "firebase/firestore";
 import AdminUsersPanel from "./AdminUsersPanel";
+import AdminPromoPanel from "./AdminPromoPanel";
 
 export default function MembersSection() {
   const { user, loading: authLoading, logout } = useAuth();
@@ -472,7 +473,12 @@ export default function MembersSection() {
                 </ul>
               )}
             </div>
-            {user?.role === "admin" && <AdminUsersPanel />}
+            {user?.role === "admin" && (
+              <>
+                <AdminPromoPanel />
+                <AdminUsersPanel />
+              </>
+            )}
           </div>
         )}
       </div>
