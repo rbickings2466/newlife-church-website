@@ -30,6 +30,9 @@ dist-ssr
 .env.production.local
 .env.development.local
 
+# Claude Code local settings
+.claude/settings.local.json
+
 # Firebase
 .firebase
 .firebaserc
