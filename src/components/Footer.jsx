@@ -1,3 +1,5 @@
+import { churchInfo, branding } from "../config/siteConfig";
+
 export default function Footer({ setActiveSection }) {
   return (
     <footer className='bg-gray-800 text-white py-12 mt-16'>
@@ -6,13 +8,13 @@ export default function Footer({ setActiveSection }) {
           <div>
             <div className='mb-4'>
               <img
-                src='/NL_Logo_300.jpg'
+                src={branding.logo}
                 className='h-20 w-auto mb-4'
-                alt='New Life Bible Fellowship Church Logo'
+                alt={branding.logoAlt}
               />
             </div>
             <p className='text-gray-400 italic mb-4'>
-              "To pursue God's glory in all things among all people"
+              "{churchInfo.tagline}"
             </p>
           </div>
           <div>
@@ -77,15 +79,15 @@ export default function Footer({ setActiveSection }) {
           <div>
             <h4 className='font-semibold mb-4'>Contact</h4>
             <address className='not-italic text-gray-400 text-sm space-y-1'>
-              <p>24771 Cannon Rd</p>
-              <p>Millsboro, DE 19966</p>
-              <p>(302)945-8145</p>
+              <p>{churchInfo.address.street}</p>
+              <p>{churchInfo.address.city}, {churchInfo.address.state} {churchInfo.address.zip}</p>
+              <p>{churchInfo.phone}</p>
             </address>
           </div>
         </div>
         <div className='border-t border-gray-700 pt-8 text-center'>
           <p className='text-gray-400 text-sm'>
-            © {new Date().getFullYear()} New Life Bible Fellowship Church. All
+            © {new Date().getFullYear()} {churchInfo.name}. All
             rights reserved.
           </p>
         </div>

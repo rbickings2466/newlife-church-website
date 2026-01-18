@@ -12,33 +12,31 @@ import {
   Shirt,
 } from "lucide-react";
 import Button from "./Button";
+import { churchInfo, serviceTimes, visitorInfo, getGoogleMapsUrl, getMailtoLink } from "../config/siteConfig";
 
 const PlanYourVisitSection = ({ setActiveSection }) => {
   const whatToExpect = [
     {
-      time: "9:30 AM",
+      time: serviceTimes.sundaySchool.time,
       title: "Sunday School",
       icon: Book,
-      description:
-        "Join us for age-appropriate Bible study classes. Adults meet in the Fellowship Hall while children have their own class midway through the Worship Service.",
+      description: serviceTimes.sundaySchool.description,
       color: "bg-blue-50 border-blue-200",
       iconColor: "text-blue-600",
     },
     {
-      time: "10:30 AM",
+      time: serviceTimes.worship.time,
       title: "Worship Service",
       icon: Music,
-      description:
-        "Our service includes congregational singing, prayer, Scripture reading, and expository preaching (typically 45-60 minutes).",
+      description: serviceTimes.worship.description,
       color: "bg-purple-50 border-purple-200",
       iconColor: "text-purple-600",
     },
     {
-      time: "12:00 PM",
+      time: serviceTimes.fellowship.time,
       title: "Fellowship Time",
       icon: Coffee,
-      description:
-        "Stay after service for refreshments and fellowship. This is a great time to meet our members and ask questions.",
+      description: serviceTimes.fellowship.description,
       color: "bg-amber-50 border-amber-200",
       iconColor: "text-amber-600",
     },
@@ -48,23 +46,20 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
     {
       icon: MapPin,
       title: "Location",
-      description:
-        "24771 Cannon Rd, Millsboro, DE 19966. We're located just off Route 113. Look for our sign!",
+      description: `${churchInfo.address.full}. We're located nearby. Look for our sign!`,
       action: "Get Directions",
-      link: "https://maps.google.com/?q=24771+Cannon+Rd+Millsboro+DE+19966",
+      link: getGoogleMapsUrl(),
     },
     {
       icon: ParkingCircle,
       title: "Parking",
-      description:
-        "Free parking is available in our lot. Handicap accessible spaces are near the main entrance.",
+      description: visitorInfo.parkingInfo,
       action: null,
     },
     {
       icon: Shirt,
       title: "Dress Code",
-      description:
-        "Come as you are! We welcome you whether you dress up or dress casual. You'll see both in our congregation.",
+      description: visitorInfo.dressCode,
       action: null,
     },
     {
@@ -76,38 +71,8 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
     },
   ];
 
-  const faqs = [
-    {
-      question: "What's the worship style?",
-      answer:
-        "Our worship is reverent and traditional, featuring hymns and contemporary worship songs accompanied by piano and/or acoustic instruments. We emphasize congregational singing and biblical preaching.",
-    },
-    {
-      question: "How long is the service?",
-      answer:
-        "Our Sunday worship service typically lasts 75-90 minutes, including music, prayer, Scripture reading, and the sermon.",
-    },
-    {
-      question: "Will I be singled out as a visitor?",
-      answer:
-        "We won't ask you to stand or raise your hand. We'll warmly welcome you, but you won't be put on the spot. Feel free to participate as much or as little as you're comfortable with.",
-    },
-    {
-      question: "What about my kids?",
-      answer:
-        "Children are welcome in the worship service. We also offer Children's Church midway through the service for ages 3-12. A nursery is available for younger children.",
-    },
-    {
-      question: "What if I'm not a Christian?",
-      answer:
-        "You're welcome here! We'd love for you to visit and hear the Gospel. Our services are designed to be understandable even if you're unfamiliar with Christianity or the Bible.",
-    },
-    {
-      question: "How can I become a member?",
-      answer:
-        "We'd love to talk with you about membership! After attending for a while, you can meet with our elders to discuss your testimony, beliefs, and desire to join our church family.",
-    },
-  ];
+  // Use FAQs from config
+  const faqs = visitorInfo.faqs;
 
   return (
     <section className='py-16 lg:py-24 bg-gray-50'>
@@ -119,17 +84,13 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
           </h2>
           <p className='text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8'>
             We'd love to have you join us for worship! Here's everything you
-            need to know for your first visit to New Life Bible Fellowship
-            Church.
+            need to know for your first visit to {churchInfo.name}.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
               size='lg'
               onClick={() =>
-                window.open(
-                  "https://maps.google.com/?q=24771+Cannon+Rd+Millsboro+DE+19966",
-                  "_blank"
-                )
+                window.open(getGoogleMapsUrl(), "_blank")
               }
             >
               <MapPin className='w-5 h-5 mr-2' />
@@ -261,7 +222,7 @@ const PlanYourVisitSection = ({ setActiveSection }) => {
               variant='outline'
               className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold'
               onClick={() =>
-                (window.location.href = "mailto:office@newlifebfcde.org")
+                (window.location.href = getMailtoLink())
               }
             >
               Email Us

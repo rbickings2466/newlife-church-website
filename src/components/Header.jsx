@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X, User, Lock, ChevronDown } from "lucide-react";
 import Button from "./Button";
 import { useAuth } from "../hooks/useAuth";
+import { branding } from "../config/siteConfig";
 
 export default function Header({ activeSection, setActiveSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,9 +63,9 @@ export default function Header({ activeSection, setActiveSection }) {
             className='flex items-center focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-lg p-2 transition-all duration-200 hover:bg-gray-50'
           >
             <img
-              src='/NL_Logo_300.jpg'
+              src={branding.logo}
               className='h-16 w-auto'
-              alt='New Life Bible Fellowship Church Logo'
+              alt={branding.logoAlt}
             />
           </button>
 

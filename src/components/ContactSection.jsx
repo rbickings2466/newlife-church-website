@@ -11,6 +11,7 @@ import {
   Send,
 } from "lucide-react";
 import Button from "./Button";
+import { churchInfo, socialMedia, serviceTimes, getGoogleMapsUrl } from "../config/siteConfig";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const ContactSection = () => {
         from_email: formData.email,
         subject: formData.subject || "New Contact Form Message",
         message: formData.message,
-        to_email: "office@newlifebfcde.org", // Your church email
+        to_email: churchInfo.email,
         reply_to: formData.email,
       };
 
@@ -68,7 +69,7 @@ const ContactSection = () => {
     } catch (error) {
       console.error("EmailJS Error:", error);
       alert(
-        "Sorry, there was an error sending your message. Please try again or contact us directly at office@newlifebfcde.org"
+        `Sorry, there was an error sending your message. Please try again or contact us directly at ${churchInfo.email}`
       );
     }
 
@@ -79,48 +80,49 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "24771 Cannon Rd\nMillsboro, DE 19966",
-      link: "https://maps.google.com/?q=24771+Cannon+Rd+Millsboro+DE",
+      content: `${churchInfo.address.street}\n${churchInfo.address.city}, ${churchInfo.address.state} ${churchInfo.address.zip}`,
+      link: getGoogleMapsUrl(),
     },
     {
       icon: Clock,
       title: "Service Times",
-      content: "Sunday Worship: 10:30 AM\nSunday School: 9:40 AM",
+      content: `Sunday Worship: ${serviceTimes.worship.time}\nSunday School: ${serviceTimes.sundaySchool.time}`,
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "(302) 945-8145 ",
-      link: "tel:+13029458145",
+      content: churchInfo.phone,
+      link: churchInfo.phoneLink,
     },
     {
       icon: Mail,
       title: "Email",
-      content: "office@newlifebfcde.org",
-      link: "mailto:office@newlifebfcde.org",
+      content: churchInfo.email,
+      link: `mailto:${churchInfo.email}`,
     },
   ];
 
+  // Build social links dynamically based on config
   const socialLinks = [
-    {
+    socialMedia.youtube.enabled && {
       icon: Youtube,
       name: "YouTube",
-      url: "https://www.youtube.com/channel/UChfYNpsG6ciJa_N6aBryi_Q",
+      url: socialMedia.youtube.url,
       color: "bg-red-600 hover:bg-red-700",
     },
-    {
+    socialMedia.facebook.enabled && {
       icon: Facebook,
       name: "Facebook",
-      url: "https://www.facebook.com/newlifebfc",
+      url: socialMedia.facebook.url,
       color: "bg-blue-600 hover:bg-blue-700",
     },
-    {
+    socialMedia.instagram.enabled && {
       icon: Instagram,
       name: "Instagram",
-      url: "https://www.instagram.com/newlifebiblefellowshipchurch/",
+      url: socialMedia.instagram.url,
       color: "bg-pink-600 hover:bg-pink-700",
     },
-  ];
+  ].filter(Boolean);
 
   return (
     <section className='py-16 lg:py-24 bg-gray-900 text-white'>
@@ -191,19 +193,19 @@ const ContactSection = () => {
               <h4 className='text-lg font-semibold mb-4'>Find Us</h4>
               <div className='bg-gray-700 rounded-lg overflow-hidden h-64'>
                 <iframe
-                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.845!2d-75.29062!3d38.5873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b8e5a1b2c3d4e5%3A0xabcdef1234567890!2s24771%20Cannon%20Rd%2C%20Millsboro%2C%20DE%2019966!5e0!3m2!1sen!2sus!4v1694182800000!5m2!1sen!2sus'
+                  src={churchInfo.googleMapsEmbed}
                   width='100%'
                   height='100%'
                   style={{ border: 0, borderRadius: "0.5rem" }}
                   allowFullScreen=''
                   loading='lazy'
                   referrerPolicy='no-referrer-when-downgrade'
-                  title='New Life Bible Fellowship Church Location'
+                  title={`${churchInfo.name} Location`}
                 ></iframe>
               </div>
               <div className='mt-4 text-center'>
                 <a
-                  href='https://maps.google.com/?q=24771+Cannon+Rd+Millsboro+DE+19966'
+                  href={getGoogleMapsUrl()}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors'

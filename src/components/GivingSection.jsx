@@ -15,6 +15,7 @@ import {
 import Button from "./Button";
 import text2giveQR from "../assets/text2give-qr-code.jpg";
 import mobileAppQR from "../assets/qrcode.jpg";
+import { churchInfo, givingInfo } from "../config/siteConfig";
 
 const GivingSection = () => {
   const [showTaxInfo, setShowTaxInfo] = useState(false);
@@ -57,61 +58,23 @@ const GivingSection = () => {
     {
       icon: Mail,
       title: "By Mail",
-      description:
-        "Mail your check payable to 'New Life Bible Fellowship Church' to our church address.",
+      description: `Mail your check payable to '${churchInfo.checkPayableTo}' to our church address.`,
       action: null,
       color: "bg-amber-50 border-amber-200",
       iconColor: "text-amber-600",
     },
   ];
 
-  const givingAreas = [
-    {
-      icon: Heart,
-      title: "General Fund",
-      description:
-        "Supports the ongoing ministry, operations, and mission of our church including salaries, facilities, and programs.",
-    },
-    {
-      icon: Globe,
-      title: "Missions",
-      description:
-        "Supports local and international mission work, spreading the Gospel worldwide and serving communities in need.",
-    },
-    {
-      icon: Building,
-      title: "Building Fund",
-      description:
-        "Designated for facility maintenance, improvements, and future expansion projects.",
-    },
-    {
-      icon: Users,
-      title: "Benevolence",
-      description:
-        "Helps members and community members in financial crisis with practical assistance and support.",
-    },
-  ];
+  // Map icon names to actual icon components
+  const iconMap = { Heart, Globe, Building, Users };
 
-  const whyWeGive = [
-    {
-      title: "Worship",
-      verse: "2 Corinthians 9:7",
-      description:
-        "Giving is an act of worship, reflecting gratitude to God for His abundant provision and grace.",
-    },
-    {
-      title: "Obedience",
-      verse: "Malachi 3:10",
-      description:
-        "Biblical giving demonstrates our trust in God and obedience to His Word.",
-    },
-    {
-      title: "Kingdom Work",
-      verse: "Matthew 6:19-21",
-      description:
-        "Our gifts support the proclamation of the Gospel and the building of God's kingdom.",
-    },
-  ];
+  const givingAreas = givingInfo.funds.map((fund) => ({
+    icon: iconMap[fund.icon] || Heart,
+    title: fund.name,
+    description: fund.description,
+  }));
+
+  const whyWeGive = givingInfo.whyWeGive;
 
   return (
     <section className="py-16 lg:py-24 bg-gray-50">
@@ -119,7 +82,7 @@ const GivingSection = () => {
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Give to New Life
+            Give to {churchInfo.shortName}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             "Each one must give as he has decided in his heart, not reluctantly
@@ -167,10 +130,7 @@ const GivingSection = () => {
               size="lg"
               className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 text-lg px-8 py-4 font-bold shadow-lg"
               onClick={() =>
-                window.open(
-                  "https://newlifebfcde.churchcenter.com/giving",
-                  "_blank"
-                )
+                window.open(churchInfo.givingPortalUrl, "_blank")
               }
             >
               <Heart className="w-6 h-6 mr-3" />
@@ -234,11 +194,11 @@ const GivingSection = () => {
               Mailing Address for Checks
             </h4>
             <address className="not-italic text-gray-600">
-              New Life Bible Fellowship Church
+              {churchInfo.name}
               <br />
-              24771 Cannon Rd
+              {churchInfo.address.street}
               <br />
-              Millsboro, DE 19966
+              {churchInfo.address.city}, {churchInfo.address.state} {churchInfo.address.zip}
             </address>
           </div>
         </div>
@@ -275,7 +235,7 @@ const GivingSection = () => {
                 Tax-Deductible Contributions
               </h4>
               <p className="text-gray-700 mb-4">
-                New Life Bible Fellowship Church is a 501(c)(3) tax-exempt
+                {churchInfo.name} is a 501(c)(3) tax-exempt
                 organization. All donations are tax-deductible to the extent
                 allowed by law.
               </p>
@@ -311,8 +271,8 @@ const GivingSection = () => {
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-2">•</span>
                       <span>
-                        For questions about your giving records, contact
-                        office@newlifebfcde.org
+                        For questions about your giving records, contact{" "}
+                        {churchInfo.email}
                       </span>
                     </li>
                   </ul>
