@@ -16,6 +16,7 @@ import MembershipSection from "./components/MembershipSection";
 import SmallGroupsSection from "./components/SmallGroupsSection";
 import FaithlifeSection from "./components/FaithlifeSection";
 import PromoBanner from "./components/PromoBanner";
+import AlertBanner from "./components/AlertBanner";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import AskNewLifeButton from "./components/AskNewLifeButton";
@@ -94,6 +95,7 @@ function AppInner() {
 
   return (
     <div className='min-h-screen bg-white'>
+      <AlertBanner />
       <Header
         activeSection={activeSection}
         setActiveSection={setActiveSection}
