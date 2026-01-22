@@ -51,18 +51,19 @@ export const alertConfig = {
   enabled: false,
 
   // Alert type: 'urgent' (red), 'warning' (yellow), 'info' (blue), 'success' (green)
-  type: 'info',
+  type: "urgent",
 
   // Alert content
-  title: '',        // Optional - bold text at the start
-  message: '',      // Main message text
+  title: "Weather Cancellation", // Optional - bold text at the start
+  message:
+    "Due to winter weather, all Sunday services are canceled. Stay safe!", // Main message text
 
   // Optional link
   link: null,
   // Example: link: { text: 'Learn More', url: '#events' }
 
   // Behavior
-  dismissible: true,  // Allow users to close the alert
+  dismissible: true, // Allow users to close the alert
 };
 
 export default alertConfig;
