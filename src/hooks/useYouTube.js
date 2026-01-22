@@ -7,6 +7,43 @@ const getFallbackVideos = () => {
   return getStaticSermons();
 };
 
+// Cache configuration
+const CACHE_KEYS = {
+  VIDEOS: "youtube_videos_cache",
+  PLAYLISTS: "youtube_playlists_cache",
+  TIMESTAMP: "youtube_cache_timestamp",
+};
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
+
+// Cache helper functions
+const getCache = (key) => {
+  try {
+    const cached = localStorage.getItem(key);
+    return cached ? JSON.parse(cached) : null;
+  } catch (e) {
+    console.warn("Cache read error:", e);
+    return null;
+  }
+};
+
+const setCache = (key, data) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(data));
+  } catch (e) {
+    console.warn("Cache write error:", e);
+  }
+};
+
+const isCacheValid = () => {
+  const timestamp = getCache(CACHE_KEYS.TIMESTAMP);
+  if (!timestamp) return false;
+  return Date.now() - timestamp < CACHE_DURATION;
+};
+
+const updateCacheTimestamp = () => {
+  setCache(CACHE_KEYS.TIMESTAMP, Date.now());
+};
+
 export const useYouTubeVideos = (maxResults = 20) => {
   const [videos, setVideos] = useState([]);
   const [playlists, setPlaylists] = useState([]);
@@ -14,7 +51,17 @@ export const useYouTubeVideos = (maxResults = 20) => {
   const [error, setError] = useState(null);
 
   // Fetch channel playlists for topic filtering
-  const fetchPlaylists = useCallback(async () => {
+  const fetchPlaylists = useCallback(async (forceRefresh = false) => {
+    // Check cache first
+    if (!forceRefresh && isCacheValid()) {
+      const cachedPlaylists = getCache(CACHE_KEYS.PLAYLISTS);
+      if (cachedPlaylists && cachedPlaylists.length > 0) {
+        console.log("Using cached playlists");
+        setPlaylists(cachedPlaylists);
+        return cachedPlaylists;
+      }
+    }
+
     try {
       const channelPlaylists = await youtubeAPI.getChannelPlaylists();
       // Normalize to include snippet shape expected by UI (playlist.snippet.title)
@@ -31,20 +78,39 @@ export const useYouTubeVideos = (maxResults = 20) => {
         },
       }));
       setPlaylists(normalized);
+      setCache(CACHE_KEYS.PLAYLISTS, normalized);
       return normalized;
     } catch (error) {
       console.warn("Could not fetch playlists:", error.message);
+      // Try to use stale cache on error
+      const cachedPlaylists = getCache(CACHE_KEYS.PLAYLISTS);
+      if (cachedPlaylists) {
+        console.log("Using stale cached playlists due to error");
+        setPlaylists(cachedPlaylists);
+        return cachedPlaylists;
+      }
       return [];
     }
   }, []);
 
   // Fetch latest channel videos (default list)
-  const fetchVideos = useCallback(async () => {
+  const fetchVideos = useCallback(async (forceRefresh = false) => {
+    // Check cache first (unless force refresh)
+    if (!forceRefresh && isCacheValid()) {
+      const cachedVideos = getCache(CACHE_KEYS.VIDEOS);
+      if (cachedVideos && cachedVideos.length > 0) {
+        console.log("Using cached videos (cache valid for", Math.round((CACHE_DURATION - (Date.now() - getCache(CACHE_KEYS.TIMESTAMP))) / 60000), "more minutes)");
+        setVideos(cachedVideos);
+        setLoading(false);
+        return;
+      }
+    }
+
     try {
       setLoading(true);
       setError(null);
 
-      console.log("Starting to fetch YouTube videos...");
+      console.log("Fetching fresh YouTube videos...");
 
       // Check if environment variables are available
       const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
@@ -95,14 +161,26 @@ export const useYouTubeVideos = (maxResults = 20) => {
           channelTitle: v.channelTitle,
         }));
         setVideos(normalized);
+        // Cache the results
+        setCache(CACHE_KEYS.VIDEOS, normalized);
+        updateCacheTimestamp();
+        console.log("Videos cached successfully");
       } else {
         console.warn("No videos found in the channel.");
         setVideos(getFallbackVideos()); // Use fallback if no videos found
       }
     } catch (error) {
       console.error("Error fetching YouTube videos:", error);
-      setError("Failed to fetch YouTube videos. Please try again later.");
-      setVideos(getFallbackVideos()); // Use fallback on error
+      // Try to use stale cache on error
+      const cachedVideos = getCache(CACHE_KEYS.VIDEOS);
+      if (cachedVideos && cachedVideos.length > 0) {
+        console.log("Using stale cached videos due to API error");
+        setVideos(cachedVideos);
+        setError(null); // Don't show error if we have cached data
+      } else {
+        setError("Failed to fetch YouTube videos. Please try again later.");
+        setVideos(getFallbackVideos()); // Use fallback on error
+      }
     } finally {
       setLoading(false);
     }
