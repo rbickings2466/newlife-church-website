@@ -119,9 +119,27 @@ export const staticSermons = [
 ];
 
 // Function to get static sermons with consistent formatting
+// Returns data in the same structure as YouTube API for UI compatibility
 export const getStaticSermons = () => {
   return staticSermons.map((sermon) => ({
-    ...sermon,
+    id: sermon.id,
+    snippet: {
+      title: sermon.title,
+      description: sermon.description,
+      publishedAt: sermon.publishedAt,
+      channelTitle: sermon.channelTitle,
+      thumbnails: {
+        high: { url: sermon.thumbnail },
+        medium: { url: sermon.thumbnail },
+        default: { url: sermon.thumbnail },
+      },
+    },
+    // Keep flat fields for legacy access
+    title: sermon.title,
+    description: sermon.description,
+    publishedAt: sermon.publishedAt,
+    thumbnail: sermon.thumbnail,
+    channelTitle: sermon.channelTitle,
     date: sermon.publishedAt.split("T")[0],
     searchableText:
       `${sermon.title} ${sermon.description} ${sermon.preacher} ${sermon.scripture}`.toLowerCase(),
