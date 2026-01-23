@@ -21,6 +21,7 @@ import {
 } from "firebase/firestore";
 import AdminUsersPanel from "./AdminUsersPanel";
 import AdminPromoPanel from "./AdminPromoPanel";
+import AdminAlertPanel from "./AdminAlertPanel";
 
 export default function MembersSection() {
   const { user, loading: authLoading, logout } = useAuth();
@@ -475,6 +476,7 @@ export default function MembersSection() {
             </div>
             {user?.role === "admin" && (
               <>
+                <AdminAlertPanel />
                 <AdminPromoPanel />
                 <AdminUsersPanel />
               </>

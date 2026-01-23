@@ -1,12 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { X, AlertTriangle, AlertCircle, Info, CheckCircle } from "lucide-react";
-import { alertConfig } from "../config/alertConfig";
+import { db } from "../lib/firebase";
+import { collection, query, where, orderBy, limit, onSnapshot } from "firebase/firestore";
 
 const AlertBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false);
+  const [alert, setAlert] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Don't render if disabled or dismissed
-  if (!alertConfig.enabled || isDismissed) {
+  // Fetch active alert from Firebase
+  useEffect(() => {
+    const alertsRef = collection(db, "alerts");
+    const q = query(
+      alertsRef,
+      where("enabled", "==", true),
+      orderBy("updatedAt", "desc"),
+      limit(1)
+    );
+
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        if (!snapshot.empty) {
+          const doc = snapshot.docs[0];
+          setAlert({ id: doc.id, ...doc.data() });
+        } else {
+          setAlert(null);
+        }
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Error fetching alert:", error);
+        setAlert(null);
+        setLoading(false);
+      }
+    );
+
+    return () => unsubscribe();
+  }, []);
+
+  // Check if this alert was previously dismissed (stored in localStorage)
+  useEffect(() => {
+    if (alert?.id) {
+      const dismissedAlerts = JSON.parse(localStorage.getItem("dismissedAlerts") || "{}");
+      if (dismissedAlerts[alert.id]) {
+        setIsDismissed(true);
+      } else {
+        setIsDismissed(false);
+      }
+    }
+  }, [alert?.id]);
+
+  const handleDismiss = () => {
+    if (alert?.id) {
+      const dismissedAlerts = JSON.parse(localStorage.getItem("dismissedAlerts") || "{}");
+      dismissedAlerts[alert.id] = true;
+      localStorage.setItem("dismissedAlerts", JSON.stringify(dismissedAlerts));
+    }
+    setIsDismissed(true);
+  };
+
+  // Don't render while loading, if no alert, or if dismissed
+  if (loading || !alert || isDismissed) {
     return null;
   }
 
@@ -46,7 +101,7 @@ const AlertBanner = () => {
     },
   };
 
-  const style = styles[alertConfig.type] || styles.info;
+  const style = styles[alert.type] || styles.info;
   const Icon = style.icon;
 
   return (
@@ -55,23 +110,23 @@ const AlertBanner = () => {
         <Icon className={`w-5 h-5 ${style.iconColor} flex-shrink-0`} />
 
         <p className="text-sm sm:text-base text-center">
-          {alertConfig.title && (
-            <span className="font-bold mr-1">{alertConfig.title}:</span>
+          {alert.title && (
+            <span className="font-bold mr-1">{alert.title}:</span>
           )}
-          {alertConfig.message}
-          {alertConfig.link && (
+          {alert.message}
+          {alert.link && (
             <a
-              href={alertConfig.link.url}
+              href={alert.link.url}
               className={`ml-2 ${style.linkColor}`}
             >
-              {alertConfig.link.text} →
+              {alert.link.text} →
             </a>
           )}
         </p>
 
-        {alertConfig.dismissible && (
+        {alert.dismissible !== false && (
           <button
-            onClick={() => setIsDismissed(true)}
+            onClick={handleDismiss}
             className={`absolute right-2 sm:right-4 p-1 rounded ${style.hoverBg} transition-colors`}
             aria-label="Dismiss alert"
           >

@@ -80,5 +80,16 @@ service cloud.firestore {
         exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
     }
+
+    // Alert banners collection
+    match /alerts/{alertId} {
+      // Anyone can read alerts (public - shown on homepage)
+      allow read: if true;
+
+      // Only admins can create, update, or delete alerts
+      allow create, update, delete: if request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
   }
 }
