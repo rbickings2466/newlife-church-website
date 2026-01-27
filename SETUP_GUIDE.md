@@ -298,44 +298,72 @@ VITE_SITE_URL=https://www.yourchurch.org
 
 ## Customize Your Church Content
 
-### Files to Edit
+### The Easy Way: Edit siteConfig.js
 
-Here are the main files you'll need to customize:
+Most church information is centralized in ONE file: **`src/config/siteConfig.js`**
 
-#### 1. Church Name and Tagline
-**File:** `src/components/HeroSection.jsx`
-- Change "New Life" to your church name
-- Update the tagline/mission statement
+Open this file and update:
 
-#### 2. Contact Information
-**File:** `src/components/ContactSection.jsx`
-- Update address, phone, email
-- Update social media links (YouTube, Facebook, Instagram)
-- Update the Google Maps embed URL
+```javascript
+export const churchInfo = {
+  name: "Your Church Name",
+  shortName: "Your Church",
+  tagline: "Your church's mission statement",
 
-#### 3. Footer
-**File:** `src/components/Footer.jsx`
-- Update church name and address
-- Update the logo path
+  address: {
+    street: "123 Main Street",
+    city: "Your City",
+    state: "ST",
+    zip: "12345",
+  },
 
-#### 4. About/Beliefs Section
-**File:** `src/components/AboutSection.jsx`
-- Customize the "Purpose of the Church" content
-- Update theological distinctives
+  phone: "(555) 123-4567",
+  email: "office@yourchurch.org",
 
-#### 5. Service Times
-**File:** `src/components/ContactSection.jsx`
-- Update service times in the `contactInfo` array
+  // Get this from Google Maps > Share > Embed a map
+  googleMapsEmbed: "https://www.google.com/maps/embed?pb=...",
 
-#### 6. Logo
-- Replace `/public/NL_Logo_300.jpg` with your church logo
-- Update references in `Footer.jsx` and other files
+  givingPortalUrl: "https://your-giving-portal.com",
+};
 
-#### 7. Hero Background Image
-- Replace `src/assets/nl_santuary_wide.jpg` with your church photo
-- Update the import in `HeroSection.jsx`
+export const socialMedia = {
+  youtube: {
+    enabled: true,  // Set to false if you don't have YouTube
+    url: "https://www.youtube.com/channel/YOUR_CHANNEL_ID",
+  },
+  facebook: {
+    enabled: true,
+    url: "https://www.facebook.com/yourchurch",
+  },
+  instagram: {
+    enabled: false,  // Set to false to hide
+    url: "",
+  },
+};
 
-#### 8. Chatbot Knowledge Base (if using)
+export const serviceTimes = {
+  sundaySchool: { time: "9:30 AM" },
+  worship: { time: "10:30 AM" },
+};
+```
+
+This single file controls the Hero, Footer, Contact section, and more!
+
+### Replace Images
+
+1. **Church Logo**: Replace `/public/NL_Logo_300.jpg` with your logo
+2. **Hero Image**: Replace `src/assets/nl_santuary_wide.jpg` with your church photo
+3. **Giving QR Codes** (optional): Add to `src/assets/` folder
+
+### Update HTML Metadata
+
+Edit `index.html` to update:
+- Page title (line with `<title>`)
+- Meta description
+- Open Graph tags for social sharing
+
+### Chatbot Knowledge Base (if using)
+
 **File:** `src/data/knowledgeBase.json`
 - Update with your church's information, beliefs, service times, etc.
 
