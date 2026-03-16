@@ -1,12 +1,26 @@
-# React + Vite
+# 🙏 Welcome to the New Life Bible Fellowship Church Website Template!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a complete, modern, and easily customizable website template designed specifically for churches. It includes built-in features for:
+- Service Times and Alerts
+- Leadership Profiles
+- Embedded YouTube Sermons
+- "Contact Us" Forms
+- An optional AI Chatbot trained on your church's information.
 
-Currently, two official plugins are available:
+## How to use this template
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+We want to make this as easy as possible. Please select the path that best describes your technical experience:
 
-## Expanding the ESLint configuration
+### 1. "I have no coding experience."
+If you have never touched a terminal and do not know what `npm` or `node` means, please follow our **No-Code Setup Guide**. You will only need a web browser!
+👉 **[Click Here for the No-Code Setup Guide](NO_CODE_SETUP_GUIDE.md)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 2. "I am a web developer."
+If you are comfortable cloning repositories, installing dependencies, and building locally, please refer to our **Deployment Guide**.
+👉 **[Click Here for the Developer Deployment Guide](DEPLOYMENT_GUIDE.md)**
+
+---
+
+For all required assets and information needed before launching your site, check the **[Setup Checklist](CHURCH_SETUP_CHECKLIST.md)**.

@@ -101,10 +101,10 @@ You'll need accounts with these services (all have free tiers):
 ## Phase 3: Set Up the Website
 
 ### Download the Template
-- [ ] Developer clones the template repository
-- [ ] Run `npm install` to install dependencies
+- [ ] If you have **no coding experience**, STOP HERE and follow the [No-Code Setup Guide](NO_CODE_SETUP_GUIDE.md).
+- [ ] If you are a developer, run `git clone` on the repository and `npm install` to install dependencies.
 
-### Update Configuration File
+### Update Configuration File (via GitHub or local editor)
 Edit `src/config/siteConfig.js`:
 - [ ] Church name and short name
 - [ ] Tagline
@@ -161,8 +161,9 @@ VITE_GEMINI_API_KEY=your_key
 ```
 - [ ] All values filled in correctly
 
-### Test Locally
-- [ ] Run `npm run dev`
+### Test the Website
+- [ ] Non-coders: Your changes are visible online within 2 minutes of clicking "Commit changes" in GitHub.
+- [ ] Developers: Run `npm run dev` locally to test.
 - [ ] Verify all sections display correctly
 - [ ] Test contact form
 - [ ] Test chatbot (if using)
@@ -173,19 +174,14 @@ VITE_GEMINI_API_KEY=your_key
 ## Phase 4: Deploy to Netlify
 
 ### Connect Repository
-- [ ] Push code to GitHub (or GitLab/Bitbucket)
-- [ ] In Netlify, click "Add new site" > "Import an existing project"
-- [ ] Connect to your Git provider and select the repository
-- [ ] Build settings:
-  - Build command: `npm run build`
-  - Publish directory: `dist`
+- [ ] Following the [No-Code Setup Guide](NO_CODE_SETUP_GUIDE.md) or [Deployment Guide](DEPLOYMENT_GUIDE.md), connect your GitHub repository to Netlify.
 
 ### Add Environment Variables
 In Netlify: Site settings > Environment variables
-- [ ] Add all variables from `.env.local`
+- [ ] Add all variables from Step 4 of the No-Code Setup Guide (or your local `.env.local` file).
 
 ### Deploy
-- [ ] Click "Deploy site"
+- [ ] Click "Trigger Deploy"
 - [ ] Wait for build to complete
 - [ ] Test the live site
 
