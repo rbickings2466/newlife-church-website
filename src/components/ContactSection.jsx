@@ -69,7 +69,7 @@ const ContactSection = () => {
     } catch (error) {
       console.error("EmailJS Error:", error);
       alert(
-        `Sorry, there was an error sending your message. Please try again or contact us directly at ${churchInfo.email}`,
+        `Sorry, there was an error sending your message. Please try again or contact us directly at ${churchInfo.email}`
       );
     }
 
@@ -102,32 +102,27 @@ const ContactSection = () => {
     },
   ];
 
-  // Build social links from config
-  const socialLinks = [];
-  if (socialMedia.youtube.enabled) {
-    socialLinks.push({
+  // Build social links dynamically based on config
+  const socialLinks = [
+    socialMedia.youtube.enabled && {
       icon: Youtube,
       name: "YouTube",
       url: socialMedia.youtube.url,
       color: "bg-red-600 hover:bg-red-700",
-    });
-  }
-  if (socialMedia.facebook.enabled) {
-    socialLinks.push({
+    },
+    socialMedia.facebook.enabled && {
       icon: Facebook,
       name: "Facebook",
       url: socialMedia.facebook.url,
       color: "bg-blue-600 hover:bg-blue-700",
-    });
-  }
-  if (socialMedia.instagram.enabled) {
-    socialLinks.push({
+    },
+    socialMedia.instagram.enabled && {
       icon: Instagram,
       name: "Instagram",
       url: socialMedia.instagram.url,
       color: "bg-pink-600 hover:bg-pink-700",
-    });
-  }
+    },
+  ].filter(Boolean);
 
   return (
     <section className='py-16 lg:py-24 bg-gray-900 text-white'>

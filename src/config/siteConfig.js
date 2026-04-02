@@ -122,7 +122,7 @@ export const aboutContent = {
     {
       title: "Glorify God",
       description: "Everything we do as a church is for the glory of God, acknowledging His supremacy in all things.",
-      icon: "sparkles",
+      icon: "sparkles", // Use icon name from lucide-react or emoji
       verse: "1 Corinthians 10:31",
     },
     {
