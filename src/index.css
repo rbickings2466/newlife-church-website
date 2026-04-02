@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-church-blue: #2563eb;
+  --color-church-red: #dc2626;
+  --color-church-blue-dark: #1e40af;
+  --color-church-red-dark: #b91c1c;
+}
+
 :root {
   --color-church-blue: #2563eb;
   --color-church-red: #dc2626;
