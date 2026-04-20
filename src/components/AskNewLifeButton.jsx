@@ -13,9 +13,6 @@ export default function AskNewLifeButton() {
     setIsModalOpen(false);
   };
 
-  return null; // Temporarily disabled due to API compromise
-  
-  /*
   return (
     <>
       <button
@@ -32,5 +29,4 @@ export default function AskNewLifeButton() {
       <ChatbotModal isOpen={isModalOpen} onClose={handleClose} />
     </>
   );
-  */
 }
