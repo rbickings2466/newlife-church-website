@@ -19,7 +19,7 @@ import PromoBanner from "./components/PromoBanner";
 import AlertBanner from "./components/AlertBanner";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
-import AskNewLifeButton from "./components/AskNewLifeButton";
+// import AskNewLifeButton from "./components/AskNewLifeButton"; // DISABLED - chatbot temporarily disabled
 import { AuthProvider } from "./context/AuthProvider";
 
 function AppInner() {
@@ -102,7 +102,7 @@ function AppInner() {
       />
       <main>{renderSection()}</main>
       <Footer setActiveSection={setActiveSection} />
-      <AskNewLifeButton />
+      {/* <AskNewLifeButton /> */}{/* DISABLED - chatbot temporarily disabled */}
     </div>
   );
 }
