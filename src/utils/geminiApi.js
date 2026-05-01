@@ -2,7 +2,7 @@ import { getRelevantKnowledge } from './ragSystem.js';
 
 // The API is now handled by a secure Netlify Function on the backend.
 // This prevents the API key from being exposed in the browser.
-const BACKEND_URL = '/.netlify/functions/ask-gemini';
+const BACKEND_URL = '/api/chatbot';
 
 // Log usage statistics
 function logUsage(inputLength, outputLength) {
