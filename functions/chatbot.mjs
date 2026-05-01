@@ -16,32 +16,49 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/
 export const handler = async (event) => {
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+    return { 
+      statusCode: 405, 
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'Method Not Allowed' }) 
+    };
   }
 
   try {
-    const { message, conversationHistory, relevantKnowledge } = JSON.parse(event.body);
+    if (!event.body) {
+      throw new Error('Empty request body');
+    }
+
+    const payload = JSON.parse(event.body);
+    const { message, conversationHistory, relevantKnowledge } = payload;
+
+    if (!message) {
+      throw new Error('No message provided');
+    }
 
     const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
     if (!GEMINI_API_KEY) {
-      console.error('Missing GEMINI_API_KEY environment variable');
+      console.error('SERVER_ERROR: GEMINI_API_KEY is not set in environment variables');
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Server configuration error' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'API key not configured on server' }),
       };
     }
 
     const systemPrompt = SYSTEM_PROMPT_TEMPLATE.replace('{KNOWLEDGE}', relevantKnowledge || 'No specific knowledge provided.');
 
-    // Build conversation context
-    const context = conversationHistory
-      ? conversationHistory
-          .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.text}`)
-          .join('\n')
-      : '';
+    // Build conversation context safely
+    let context = '';
+    if (Array.isArray(conversationHistory)) {
+      context = conversationHistory
+        .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.text}`)
+        .join('\n');
+    }
 
     const fullPrompt = `${systemPrompt}\n\n${context ? 'Previous conversation:\n' + context + '\n\n' : ''}User: ${message}`;
+
+    console.log('Forwarding request to Gemini API...');
 
     const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
       method: 'POST',
@@ -63,10 +80,14 @@ export const handler = async (event) => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('Gemini API Error:', errorText);
+      console.error('Gemini API returned error:', response.status, errorText);
       return {
         statusCode: response.status,
-        body: JSON.stringify({ error: 'Failed to communicate with AI service' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          error: `Gemini API Error: ${response.status}`,
+          details: errorText 
+        }),
       };
     }
 
@@ -76,7 +97,8 @@ export const handler = async (event) => {
     if (!reply) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'No response received from AI' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'No response received from AI candidates' }),
       };
     }
 
@@ -84,14 +106,19 @@ export const handler = async (event) => {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*', // Optional for stability
       },
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
-    console.error('Function error:', error);
+    console.error('CHATBOT_FUNCTION_ERROR:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Internal server error' }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        error: 'Internal server error', 
+        message: error.message 
+      }),
     };
   }
 };
