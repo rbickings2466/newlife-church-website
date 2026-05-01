@@ -11,7 +11,8 @@ KNOWLEDGE BASE:
 
 Answer based ONLY on the above information:`;
 
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+// Updated to Gemini 2.5 Flash (v1 Stable) as Gemini 1.5 has been retired.
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent';
 
 export const handler = async (event) => {
   // Only allow POST requests
@@ -38,7 +39,7 @@ export const handler = async (event) => {
     const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
     if (!GEMINI_API_KEY) {
-      console.error('SERVER_ERROR: GEMINI_API_KEY is not set in environment variables');
+      console.error('SERVER_ERROR: GEMINI_API_KEY is not set');
       return {
         statusCode: 500,
         headers: { 'Content-Type': 'application/json' },
@@ -58,7 +59,7 @@ export const handler = async (event) => {
 
     const fullPrompt = `${systemPrompt}\n\n${context ? 'Previous conversation:\n' + context + '\n\n' : ''}User: ${message}`;
 
-    console.log('Forwarding request to Gemini API...');
+    console.log('Forwarding request to Gemini API (v1/gemini-2.5-flash)...');
 
     const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
       method: 'POST',
@@ -80,12 +81,12 @@ export const handler = async (event) => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('Gemini API returned error:', response.status, errorText);
+      console.error('Gemini API Error Response:', response.status, errorText);
       return {
         statusCode: response.status,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          error: `Gemini API Error: ${response.status}`,
+          error: `Google API Error: ${response.status}`,
           details: errorText 
         }),
       };
@@ -106,7 +107,7 @@ export const handler = async (event) => {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*', // Optional for stability
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({ reply }),
     };
