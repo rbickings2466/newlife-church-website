@@ -145,3 +145,56 @@ export const getStaticSermons = () => {
       `${sermon.title} ${sermon.description} ${sermon.preacher} ${sermon.scripture}`.toLowerCase(),
   }));
 };
+
+export const staticPlaylists = [
+  {
+    id: "PL_Faith_Fallback",
+    title: "Faith",
+    description: "Sermons about faith and trust.",
+    itemCount: 5,
+    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1280&h=720&fit=crop&crop=center",
+  },
+  {
+    id: "PL_Prayer_Fallback",
+    title: "Prayer",
+    description: "Sermons on the power of prayer.",
+    itemCount: 3,
+    thumbnail: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1280&h=720&fit=crop&crop=center",
+  },
+  {
+    id: "PL_Salvation_Fallback",
+    title: "Salvation",
+    description: "Messages exploring God's saving grace.",
+    itemCount: 4,
+    thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1280&h=720&fit=crop&crop=center",
+  },
+  {
+    id: "PL_ChristianLiving_Fallback",
+    title: "Christian Living",
+    description: "Practical ways to live for Christ.",
+    itemCount: 6,
+    thumbnail: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1280&h=720&fit=crop&crop=center",
+  },
+  {
+    id: "PL_Worship_Fallback",
+    title: "Worship",
+    description: "Praising our Lord.",
+    itemCount: 2,
+    thumbnail: "https://images.unsplash.com/photo-1493962853295-0fd8d5f9b9eb?w=1280&h=720&fit=crop&crop=center",
+  },
+];
+
+export const getStaticPlaylists = () => {
+  return staticPlaylists.map((p) => ({
+    ...p,
+    snippet: {
+      title: p.title,
+      description: p.description,
+      thumbnails: {
+        high: { url: p.thumbnail },
+        medium: { url: p.thumbnail },
+        default: { url: p.thumbnail },
+      },
+    },
+  }));
+};

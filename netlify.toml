@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
@@ -9,6 +10,5 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  # Disable secrets scanning for public API keys (Firebase, YouTube, EmailJS)
-  # These are intentionally public and designed to be exposed in client-side code
-  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
+  # Secrets scanning is enabled by default to protect sensitive keys
+

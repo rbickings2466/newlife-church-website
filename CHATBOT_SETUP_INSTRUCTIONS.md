@@ -18,36 +18,27 @@ With the RAG optimization system:
 - **~$1-3 per month** for typical church website traffic
 - Rate limiting prevents abuse (10 messages/hour per user)
 
-## Setup Steps
+### Setup Steps
 
 ### Step 1: Get a Gemini API Key
 
 1. Go to [Google AI Studio](https://aistudio.google.com/apikey)
 2. Sign in with your Google account
 3. Click "Create API Key"
-4. Copy the API key (starts with something like `AIza...`)
+4. Copy the API key (starts with `AIza...`)
 
-**Important:** Keep this key secure! Never commit it to git.
+**CRITICAL SECURITY:** Keep this key secret. Never share it or post it publicly.
 
 ### Step 2: Add API Key to Environment File
 
 1. Open the file `.env.local` in your project root
 2. Add this line (replace `YOUR_API_KEY_HERE` with your actual key):
    ```
-   VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
+   GEMINI_API_KEY=YOUR_API_KEY_HERE
    ```
+   **Note:** Notice there is NO `VITE_` prefix. This is intentional. Removing the prefix prevents the key from being bundled into the public website code.
+
 3. Save the file
-
-Your `.env.local` should now contain:
-```
-# Firebase configuration
-VITE_FIREBASE_API_KEY=...
-VITE_FIREBASE_AUTH_DOMAIN=...
-# ... other Firebase keys ...
-
-# Gemini API Key for Ask New Life Chatbot
-VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
-```
 
 ### Step 3: Test Locally
 
@@ -56,61 +47,39 @@ VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
    npm run dev
    ```
 
-2. Open your browser to the local URL (usually `http://localhost:5173`)
+2. The chatbot now uses a secure "Netlify Function" to talk to Google. This keeps your key safe.
 
-3. Click the "Ask New Life" button in the bottom-right corner
-
-4. Try asking a question like:
-   - "What time is Sunday service?"
-   - "How can I get saved?"
-   - "Tell me about church history"
-
-5. Check the browser console (F12) to see:
-   - RAG token usage: `RAG: Retrieved 3 chunks (~250 tokens vs ~19,000 full KB)`
-   - API usage: `Gemini API Usage - Today: 1 queries, 2900 total tokens`
+3. Open your browser to the local URL (usually `http://localhost:5173`)
+4. Click the "Ask New Life" button and try asking a question.
 
 ### Step 4: Deploy to Production
 
-Once tested locally, deploy to production:
+When deploying to Netlify:
 
-#### Option A: Deploy via Netlify (Recommended)
+1. **Add the API key to Netlify Environment Variables:**
+   - Go to: **Site Settings** → **Environment Variables**
+   - Click "Add a variable"
+   - Key: `GEMINI_API_KEY` (No `VITE_` prefix!)
+   - Value: `YOUR_API_KEY_HERE`
 
-1. Add the API key to Netlify environment variables:
-   - Go to: Site Settings → Environment Variables
-   - Add: `VITE_GEMINI_API_KEY` = `YOUR_API_KEY_HERE`
-
-2. Deploy the site:
+2. **Deploy the site:**
    ```bash
-   npm run build
    git add .
-   git commit -m "Restore API-based chatbot with RAG optimization"
+   git commit -m "Secure chatbot with backend function"
    git push
    ```
 
-3. Netlify will automatically deploy your changes
+## How It Works (Secure Version)
 
-#### Option B: Manual Deployment
+### Backend Proxy
+Previously, the website talked directly to Google. This exposed your API key to anyone who visited the site. Now:
+1. The website sends the question to a **Netlify Function** (a secure server-side script).
+2. The Netlify Function retrieves the `GEMINI_API_KEY` from a private environment variable.
+3. The Netlify Function talks to Google and returns the answer to your website.
 
-```bash
-npm run build
-# Then upload the 'dist' folder to your hosting provider
-```
+**Result:** Your API key is never sent to the visitor's browser. It is 100% hidden.
 
-## How It Works
-
-### RAG (Retrieval Augmented Generation)
-Instead of sending the entire 76KB knowledge base with every message, the RAG system:
-1. Parses knowledge into 11 searchable chunks
-2. Extracts keywords from user questions
-3. Returns only the 3 most relevant chunks (~250 tokens instead of ~19,000)
-4. **Saves 99% of knowledge base tokens!**
-
-### Rate Limiting
-- Limits each user to 10 messages per hour
-- Stored in browser localStorage
-- Prevents API abuse and keeps costs predictable
-
-### Usage Tracking
+## Usage Tracking
 - Logs daily API usage to browser localStorage
 - Keeps 30 days of history
 - View in browser console: `Gemini API Usage - Today: X queries`
@@ -149,7 +118,7 @@ For detailed instructions, see: [HOW_TO_ADD_CHATBOT_KNOWLEDGE.md](HOW_TO_ADD_CHA
 ## Troubleshooting
 
 ### "API key not configured" error
-- Make sure `VITE_GEMINI_API_KEY` is set in `.env.local`
+- Make sure `GEMINI_API_KEY` is set in `.env.local` or Netlify Environment Variables
 - Restart the dev server after adding the key
 - For production, ensure it's set in Netlify environment variables
 

@@ -377,7 +377,7 @@ export const youtubeAPI = {
 
       if (!response.ok) {
         console.warn("Could not fetch channel playlists:", response.status);
-        return [];
+        throw new Error(`Failed to fetch playlists: ${response.status}`);
       }
 
       const data = await response.json();
@@ -411,8 +411,9 @@ export const youtubeAPI = {
       );
 
       if (!response.ok) {
-        console.warn("Could not fetch playlist videos:", response.status);
-        return [];
+        const errorText = await response.text();
+        console.warn("Could not fetch playlist videos:", response.status, errorText);
+        throw new Error(`Failed to fetch playlist videos: ${response.status}`);
       }
 
       const data = await response.json();

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { youtubeAPI } from "../lib/youtube";
-import { getStaticSermons } from "../data/staticSermons";
+import { getStaticSermons, getStaticPlaylists } from "../data/staticSermons";
 
 // Fallback videos in case of quota exceeded
 const getFallbackVideos = () => {
@@ -84,12 +84,15 @@ export const useYouTubeVideos = (maxResults = 20) => {
       console.warn("Could not fetch playlists:", error.message);
       // Try to use stale cache on error
       const cachedPlaylists = getCache(CACHE_KEYS.PLAYLISTS);
-      if (cachedPlaylists) {
+      if (cachedPlaylists && cachedPlaylists.length > 0) {
         console.log("Using stale cached playlists due to error");
         setPlaylists(cachedPlaylists);
         return cachedPlaylists;
       }
-      return [];
+      const fallbackPlaylists = getStaticPlaylists();
+      console.log("Using static fallback playlists due to empty cache");
+      setPlaylists(fallbackPlaylists);
+      return fallbackPlaylists;
     }
   }, []);
 
@@ -178,8 +181,9 @@ export const useYouTubeVideos = (maxResults = 20) => {
         setVideos(cachedVideos);
         setError(null); // Don't show error if we have cached data
       } else {
-        setError("Failed to fetch YouTube videos. Please try again later.");
+        console.log("Using static fallback videos (no cache available)");
         setVideos(getFallbackVideos()); // Use fallback on error
+        setError(null); // Don't show error since we have fallback content to display
       }
     } finally {
       setLoading(false);
@@ -200,6 +204,14 @@ export const useYouTubeVideos = (maxResults = 20) => {
           playlistId,
           maxResults
         );
+
+        if (playlistVideos.length === 0) {
+          // API returned success but no videos — keep current videos so UI isn't blank
+          console.warn("Playlist returned 0 videos, keeping current videos");
+          setError(null);
+          return;
+        }
+
         const normalized = playlistVideos.map((v) => ({
           id: v.id,
           snippet: {
@@ -223,10 +235,10 @@ export const useYouTubeVideos = (maxResults = 20) => {
         setVideos(normalized);
       } catch (err) {
         console.error("Error fetching playlist videos:", err.message);
-        setError(
-          `Failed to fetch videos for the selected topic. ${err.message}`
-        );
-        setVideos(getFallbackVideos());
+        // Don't replace current videos with fallback — keep what we have
+        // so the user still sees sermons rather than an empty grid
+        setError(null); // Don't show error since we still have content
+        console.log("Keeping current videos due to playlist fetch failure");
       } finally {
         setLoading(false);
       }
